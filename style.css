@@ -1,16 +1,133 @@
-/* ===== GOOGLE FONTS ===== */
+/* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-
-/* VARIABLES */
-:root{
-  --header-height: 3rem;
-  --font-semibold: 600;
+/* ==== VARIABLES ==== */
+:root {
+	--header-height: 3rem;
+	--font-semi: 600;
 }
 
 /* COLORS */
+:root {
+	--lm-primary-color: #1abc9c;
+	--lm-dark-color: #0e2431;
 
-:root{
-  --primary-color:#1abc9c;
-  --secondary-color:
+	--dm-primary-color: #16a085;
+	--dm-dark-color: #000;
+}
+
+/* FONTS AND TYPOGRAPHY */
+:root {
+	--body-font: 'Poppins', sans-serif;
+	--big-font-size: 2rem;
+	--h2-font-size: 1.25rem;
+	--normal-font-size: 0.938rem;
+}
+
+@media screen and(min-width:768px) {
+	:root {
+		--big-font-size: 3.5rem;
+		--h2-font-size: 2rem;
+		--normal-font-size: 1rem;
+	}
+}
+
+/* MARGINS */
+:root {
+	--mb-1: 0.5rem;
+	--mb-2: 1rem;
+	--mb-3: 1.5rem;
+	--mb-4: 2rem;
+	--mb-5: 2.5rem;
+	--mb-6: 3rem;
+}
+
+/* BASIC SETTINGS */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+	color: var(--lm-dark-color);
+}
+
+h1,
+h2,
+p {
+	margin: 0px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* UTILITY CLASSES */
+.section-title {
+	position: relative;
+	font-size: var(--h2-font-size);
+	color: var(--lm-primary-color);
+	margin-top: var(--mb-2);
+	margin-bottom: var(--mb-4);
+	text-align: center;
+}
+
+.section-title::after {
+	position: absolute;
+	content: '';
+	width: 64px;
+	height: 0.18rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 2rem;
+	background-color: var(--lm-primary-color);
+}
+
+.section {
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+}
+
+/* NAVBAR */
+
+nav {
+	height: var(--header-height);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+	.nav-menu {
+		display: none;
+	}
+}
+
+.nav-list {
+	display: block;
+}
+
+.nav-item {
+	padding: 0 20px;
 }
