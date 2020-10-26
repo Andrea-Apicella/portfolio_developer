@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
+/* Variables */
+:root {
+	--dark-text-color: #666;
+	--light-text-color: #32333c;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -100,21 +106,60 @@ body {
 /* LANDING PAGE */
 
 #landing-page {
-	height: 100vh;
-	background-image: url('./images/background/leaves-mobile.jpg');
+	height: 95vh;
+	/* background-image: url('./images/background/leaves-mobile.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
-
+	background-size: cover; */
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#main-text-wrapper {
+	margin: 9rem 0 0 1rem;
+	width: 360px;
+}
+
+#main-text-wrapper h1 {
+	color: var(--light-text-color);
+	font-size: 3rem;
+}
+
+#main-text-wrapper h2 {
+	font-weight: 400;
+	color: var(--dark-text-color);
+	font-size: 1.5rem;
+	margin: 2rem 0 2.1rem 0;
+}
+
+#main-text-wrapper button {
+	border: solid 2px darkslategray;
+	border-radius: 4px;
+	width: 220px;
+	padding: 16px 0;
+	font-size: 1.5rem;
+	font-weight: 400;
+	cursor: pointer;
+	transition-property: background, color;
+	transition: 0.1s ease-in;
+}
+#main-text-wrapper button {
+	background-color: darkslategray;
+	color: white;
+}
+
+#main-text-wrapper button:hover {
+	background: none;
+	transition-property: background, color;
+	transition: 0.1s ease-in;
+	color: darkslategray;
 }
 
 #profile-picture {
+	align-self: center;
 	width: 300px;
 	height: 300px;
-	border-radius: 50%;
 	background: url('images/profile/profile-picture.jpg') no-repeat center center;
 	background-size: contain;
 }
