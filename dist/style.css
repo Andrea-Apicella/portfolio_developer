@@ -1,1 +1,182 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  color: black;
+}
+
+.navbar .brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar .navbar-links ul {
+  display: flex;
+  font-weight: 600;
+}
+
+.navbar .navbar-links ul li {
+  list-style: none;
+}
+
+.navbar .navbar-links ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #32333c;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar .navbar-links ul li a:hover {
+  color: darkseagreen;
+}
+
+.navbar .navbar-links ul li a:after {
+  display: block;
+  content: '';
+  width: 0px;
+  height: 2px;
+  border-radius: 3px;
+  background: darkseagreen;
+  position: absolute;
+  bottom: -1;
+  left: 17px;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .navbar-links ul li a:hover:after {
+  width: 35px;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .navbar-links ul li a.active:after {
+  width: 35px;
+}
+
+.navbar #toggle-button {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 21px;
+}
+
+.navbar #toggle-button:hover .bar {
+  background-color: darkseagreen;
+  transition: background-color 0.3s ease;
+}
+
+.navbar #toggle-button .bar {
+  position: relative;
+  height: 3px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #666;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .navbar .navbar-links {
+    background-color: white;
+    display: flex;
+    /* visibility: hidden; */
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    max-height: 0px;
+    transition: max-height 0.5s;
+    z-index: 1;
+    overflow-y: hidden;
+  }
+  .navbar .navbar-links.active {
+    max-height: 1000px;
+    /* visibility: visible; */
+    transition: max-height 0.7s;
+  }
+  .navbar .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar .navbar-links ul li {
+    margin-left: 1rem;
+  }
+  .navbar #toggle-button {
+    display: flex;
+  }
+}
+
+#landing-page {
+  background-color: #fbfbfb;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#landing-page #main-text-wrapper {
+  margin: 9rem 0 0 1rem;
+  width: 360px;
+}
+
+#landing-page #main-text-wrapper h1 {
+  color: #32333c;
+  font-size: 3rem;
+}
+
+#landing-page #main-text-wrapper h2 {
+  font-weight: 400;
+  color: #666;
+  font-size: 1.5rem;
+  margin: 2rem 0 2.1rem 0;
+}
+
+#landing-page #main-text-wrapper button {
+  border: solid 2px darkslategray;
+  border-radius: 4px;
+  width: 220px;
+  padding: 16px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: darkslategray;
+  color: white;
+  transition: background-color, color 0.1s ease-in;
+}
+
+#landing-page #main-text-wrapper button:hover {
+  background: none;
+  transition-property: background, color;
+  transition: 0.1s ease-in;
+  color: darkslategray;
+}
+
+#profile-picture {
+  align-self: center;
+  width: 300px;
+  height: 300px;
+  background: url("images/profile/profile-picture.jpg") no-repeat center center;
+  background-size: contain;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+/*# sourceMappingURL=style.css.map */
