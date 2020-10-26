@@ -4,6 +4,7 @@
 :root {
 	--dark-text-color: #666;
 	--light-text-color: #32333c;
+	--background-light-color: #fbfbfb;
 }
 
 * {
@@ -73,13 +74,16 @@ body {
 	}
 
 	.navbar-links {
+		background-color: white;
 		display: flex;
-		visibility: hidden;
+		/* visibility: hidden; */
 		position: absolute;
 		top: 50px;
 		width: 100%;
-		transform: translateY(-100%);
-		transition: all 0.1s ease;
+		max-height: 0px;
+		transition: max-height 0.5s;
+		z-index: 1;
+		overflow-y: hidden;
 	}
 
 	.navbar {
@@ -97,15 +101,16 @@ body {
 	}
 
 	.navbar-links.active {
-		visibility: visible;
-		transform: translateY(0%);
-		transition: transform 0.5s ease;
+		max-height: 1000px;
+		/* visibility: visible; */
+		transition: max-height 0.7s;
 	}
 }
 
 /* LANDING PAGE */
 
 #landing-page {
+	background-color: var(--background-light-color);
 	height: 95vh;
 	/* background-image: url('./images/background/leaves-mobile.jpg');
 	background-repeat: no-repeat;
