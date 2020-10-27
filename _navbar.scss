@@ -8,7 +8,8 @@
 
 	.brand-title {
 		font-size: 1.5rem;
-		margin: 0.5rem;
+		margin-left: 1rem;
+		color: $primary-accent-color;
 	}
 
 	.navbar-links {
@@ -59,26 +60,61 @@
 	#toggle-button {
 		display: none;
 		position: absolute;
-		top: calc($navbar-height/2);
+		top: calc(#{$navbar-height/2} - 12px);
 		right: 1rem;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
 		width: 30px;
-    height: 21px;
+		height: 21px;
+		cursor: pointer;
 
-		&:hover .bar {
-			background-color: $primary-accent-color;
-			transition: background-color 0.3s ease;
-		}
-
-		.bar {
-			position: relative;
+		span {
+			position: absolute;
+			display: block;
 			height: 3px;
 			width: 100%;
 			border-radius: 10px;
 			background-color: $light-text-color;
-			transition: background-color 0.3s ease;
+			transform: rotate(0deg);
+			opacity: 1;
+			left: 0px;
+			transition: all 0.2s ease-in-out;
+		}
+
+		span:nth-child(1) {
+			top: 0px;
+			transform-origin: left center;
+		}
+
+		span:nth-child(2) {
+			top: 9px;
+			transform-origin: left center;
+		}
+		span:nth-child(3) {
+			top: 18px;
+			transform-origin: left center;
+		}
+
+		&.clicked {
+			span:nth-child(1) {
+				top: -1px;
+				transform: rotate(45deg);
+			}
+
+			span:nth-child(2) {
+				opacity: 0;
+				width: 0%;
+				left: -10px;
+			}
+			span:nth-child(3) {
+				top: 20px;
+				transform: rotate(-45deg);
+			}
+		}
+
+		&:hover span {
+			background-color: $primary-accent-color;
 		}
 	}
 }
@@ -91,19 +127,16 @@
 		justify-content: center;
 		padding: 0;
 		.navbar-links {
-			background-color: white;
-			display: -webkit-box;
-			display: -ms-flexbox;
 			display: flex;
-			/* visibility: hidden; */
 			position: absolute;
 			top: $navbar-height;
 			width: 100%;
 			max-height: 0px;
-			-webkit-transition: max-height 0.5s;
+			background-color: white;
+			font-size: 0.9rem;
 			transition: max-height 0.5s;
 			z-index: 1;
-			overflow-y: hidden;
+			overflow: hidden;
 
 			&.active {
 				max-height: 1000px;

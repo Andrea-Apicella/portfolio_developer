@@ -3,33 +3,34 @@
 	height: 95vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-evenly;
 
 	#main-text-wrapper {
-		margin: 9rem 0 0 1rem;
+		margin: 2rem 0 0 1rem;
 		width: 360px;
 
 		h1 {
 			color: $dark-text-color;
-			font-size: 3rem;
+			font-size: 2.5rem;
 		}
 
 		h2 {
 			font-weight: 400;
 			color: $light-text-color;
 			font-size: 1.5rem;
-			margin: 2rem 0 2.1rem 0;
+			margin: 1rem 0 2.1rem 0;
 		}
 
 		button {
-			border: solid 2px darkslategray;
+			border: solid 2px $primary-accent-color;
 			border-radius: 4px;
 			width: 220px;
 			padding: 16px 0;
-			font-size: 1.5rem;
-			font-weight: 500;
+			font-size: 1.2rem;
+			font-weight: 600;
 			cursor: pointer;
-			background-color: darkslategray;
+			outline: none;
+			background-color: $primary-accent-color;
 			color: white;
 			transition: background-color, color 0.1s ease-in;
 
@@ -37,7 +38,7 @@
 				background: none;
 				transition-property: background, color;
 				transition: 0.1s ease-in;
-				color: darkslategray;
+				color: $primary-accent-color;
 			}
 		}
 	}
@@ -47,8 +48,9 @@
 	-ms-flex-item-align: center;
 	-ms-grid-row-align: center;
 	align-self: center;
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	background: url('images/profile/profile-picture.jpg') no-repeat center center;
 	background-size: contain;
+	border-radius: 50%;
 }

@@ -10,7 +10,8 @@
 
 .navbar .brand-title {
   font-size: 1.5rem;
-  margin: 0.5rem;
+  margin-left: 1rem;
+  color: #16a085;
 }
 
 .navbar .navbar-links ul {
@@ -31,7 +32,7 @@
 }
 
 .navbar .navbar-links ul li a:hover {
-  color: darkseagreen;
+  color: #16a085;
 }
 
 .navbar .navbar-links ul li a:after {
@@ -40,7 +41,7 @@
   width: 0px;
   height: 2px;
   border-radius: 3px;
-  background: darkseagreen;
+  background: #16a085;
   position: absolute;
   bottom: -1;
   left: 17px;
@@ -59,27 +60,62 @@
 .navbar #toggle-button {
   display: none;
   position: absolute;
-  top: calc($navbar-height/2);
+  top: calc(45px - 12px);
   right: 1rem;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 30px;
   height: 21px;
+  cursor: pointer;
 }
 
-.navbar #toggle-button:hover .bar {
-  background-color: darkseagreen;
-  transition: background-color 0.3s ease;
-}
-
-.navbar #toggle-button .bar {
-  position: relative;
+.navbar #toggle-button span {
+  position: absolute;
+  display: block;
   height: 3px;
   width: 100%;
   border-radius: 10px;
   background-color: #666;
-  transition: background-color 0.3s ease;
+  transform: rotate(0deg);
+  opacity: 1;
+  left: 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar #toggle-button span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.navbar #toggle-button span:nth-child(2) {
+  top: 9px;
+  transform-origin: left center;
+}
+
+.navbar #toggle-button span:nth-child(3) {
+  top: 18px;
+  transform-origin: left center;
+}
+
+.navbar #toggle-button.clicked span:nth-child(1) {
+  top: -1px;
+  transform: rotate(45deg);
+}
+
+.navbar #toggle-button.clicked span:nth-child(2) {
+  opacity: 0;
+  width: 0%;
+  left: -10px;
+}
+
+.navbar #toggle-button.clicked span:nth-child(3) {
+  top: 20px;
+  transform: rotate(-45deg);
+}
+
+.navbar #toggle-button:hover span {
+  background-color: #16a085;
 }
 
 @media (max-width: 768px) {
@@ -90,16 +126,16 @@
     padding: 0;
   }
   .navbar .navbar-links {
-    background-color: white;
     display: flex;
-    /* visibility: hidden; */
     position: absolute;
     top: 90px;
     width: 100%;
     max-height: 0px;
+    background-color: white;
+    font-size: 0.9rem;
     transition: max-height 0.5s;
     z-index: 1;
-    overflow-y: hidden;
+    overflow: hidden;
   }
   .navbar .navbar-links.active {
     max-height: 1000px;
@@ -123,35 +159,36 @@
   height: 95vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #landing-page #main-text-wrapper {
-  margin: 9rem 0 0 1rem;
+  margin: 2rem 0 0 1rem;
   width: 360px;
 }
 
 #landing-page #main-text-wrapper h1 {
   color: #32333c;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 #landing-page #main-text-wrapper h2 {
   font-weight: 400;
   color: #666;
   font-size: 1.5rem;
-  margin: 2rem 0 2.1rem 0;
+  margin: 1rem 0 2.1rem 0;
 }
 
 #landing-page #main-text-wrapper button {
-  border: solid 2px darkslategray;
+  border: solid 2px #16a085;
   border-radius: 4px;
   width: 220px;
   padding: 16px 0;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
   cursor: pointer;
-  background-color: darkslategray;
+  outline: none;
+  background-color: #16a085;
   color: white;
   transition: background-color, color 0.1s ease-in;
 }
@@ -160,15 +197,16 @@
   background: none;
   transition-property: background, color;
   transition: 0.1s ease-in;
-  color: darkslategray;
+  color: #16a085;
 }
 
 #profile-picture {
   align-self: center;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   background: url("images/profile/profile-picture.jpg") no-repeat center center;
   background-size: contain;
+  border-radius: 50%;
 }
 
 * {
