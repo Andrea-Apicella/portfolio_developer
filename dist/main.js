@@ -1,6 +1,7 @@
 const toggleButton = document.querySelector('#toggle-button');
 const navbarLinks = document.querySelector('.navbar-links');
 const navLinks = document.querySelectorAll('.nav-link');
+const darkModeToggler = document.querySelector('#dark-mode-toggler');
 toggleButton.addEventListener('click', (e) => {
 	e.preventDefault;
 	navbarLinks.classList.toggle('active');
@@ -18,3 +19,9 @@ navLinks.forEach((link) => {
 		link.classList.add('active');
 	});
 });
+
+
+darkModeToggler.addEventListener('click', ()=>{
+	document.body.classList.toggle('dark');
+
+})

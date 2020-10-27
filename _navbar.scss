@@ -3,13 +3,16 @@
 	justify-content: space-between;
 	align-items: center;
 	height: $navbar-height;
-	color: black;
 	padding: 0 10rem;
+	background: var(--navbar-background-color);
+	color: var(--text-color);
+	transition-property: background-color, color;
+	transition: 0.9s ease;
 
 	.brand-title {
 		font-size: 1.5rem;
 		margin-left: 1rem;
-		color: $primary-accent-color;
+		color: var(--primary-accent-color);
 	}
 
 	.navbar-links {
@@ -23,12 +26,11 @@
 				a {
 					position: relative;
 					text-decoration: none;
-					color: $dark-text-color;
 					padding: 1rem;
 					display: block;
 
 					&:hover {
-						color: $primary-accent-color;
+						color: var(--primary-accent-color);
 					}
 
 					&:after {
@@ -37,7 +39,7 @@
 						width: 0px;
 						height: 2px;
 						border-radius: 3px;
-						background: $primary-accent-color;
+						background: var(--primary-accent-color);
 						position: absolute;
 						bottom: -1;
 						left: 17px;
@@ -68,6 +70,7 @@
 		width: 30px;
 		height: 21px;
 		cursor: pointer;
+		transition: transform 0.5s ease;
 
 		span {
 			position: absolute;
@@ -97,6 +100,10 @@
 		}
 
 		&.clicked {
+			span {
+				background-color: var(--primary-accent-color);
+			}
+
 			span:nth-child(1) {
 				top: -1px;
 				transform: rotate(45deg);
@@ -114,7 +121,7 @@
 		}
 
 		&:hover span {
-			background-color: $primary-accent-color;
+			background-color: var(--primary-accent-color);
 		}
 	}
 }
@@ -132,7 +139,7 @@
 			top: $navbar-height;
 			width: 100%;
 			max-height: 0px;
-			background-color: white;
+			background-color: var(--navbar-background-color);
 			font-size: 0.9rem;
 			transition: max-height 0.5s;
 			z-index: 1;
@@ -160,6 +167,8 @@
 
 		#toggle-button {
 			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 }

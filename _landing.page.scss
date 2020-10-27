@@ -1,28 +1,23 @@
 #landing-page {
-	background-color: $background-light-color;
 	height: 95vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
+	padding: 0 1.5rem;
 
 	#main-text-wrapper {
-		margin: 2rem 0 0 1rem;
-		width: 360px;
-
 		h1 {
-			color: $dark-text-color;
 			font-size: 2.5rem;
 		}
 
 		h2 {
 			font-weight: 400;
-			color: $light-text-color;
 			font-size: 1.5rem;
 			margin: 1rem 0 2.1rem 0;
 		}
 
 		button {
-			border: solid 2px $primary-accent-color;
+			border: solid 2px var(--primary-accent-color);
 			border-radius: 4px;
 			width: 220px;
 			padding: 16px 0;
@@ -30,15 +25,16 @@
 			font-weight: 600;
 			cursor: pointer;
 			outline: none;
-			background-color: $primary-accent-color;
+			background-color: var(--primary-accent-color);
 			color: white;
-			transition: background-color, color 0.1s ease-in;
+			transition-property: background-color, color;
+			transition: 0.9s ease;
 
 			&:hover {
 				background: none;
 				transition-property: background, color;
 				transition: 0.1s ease-in;
-				color: $primary-accent-color;
+				color: var(--primary-accent-color);
 			}
 		}
 	}
