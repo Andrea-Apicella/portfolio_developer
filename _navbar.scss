@@ -6,8 +6,8 @@
 	padding: 0 10rem;
 	background: var(--navbar-background-color);
 	color: var(--text-color);
-	transition-property: background-color, color;
 	transition: 0.9s ease;
+	transition-property: background-color, color;
 
 	.brand-title {
 		font-size: 1.5rem;
@@ -70,7 +70,7 @@
 		width: 30px;
 		height: 21px;
 		cursor: pointer;
-		transition: transform 0.5s ease;
+		transition: transform 0.3s ease;
 
 		span {
 			position: absolute;
@@ -82,7 +82,7 @@
 			transform: rotate(0deg);
 			opacity: 1;
 			left: 0px;
-			transition: all 0.2s ease-in-out;
+			transition: all 0.3s ease-in-out;
 		}
 
 		span:nth-child(1) {
