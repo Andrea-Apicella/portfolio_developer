@@ -206,6 +206,27 @@
   border-radius: 50%;
 }
 
+@media only screen and (min-width: 768px) {
+  #landing-page {
+    flex-direction: row;
+    padding-top: 6rem;
+    align-items: start;
+  }
+  #landing-page #main-text-wrapper h1 {
+    font-size: 3rem;
+  }
+  #landing-page #main-text-wrapper h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 1rem 0 4.2rem 0;
+  }
+  #landing-page #profile-picture {
+    width: 200px;
+    height: 200px;
+    align-self: initial;
+  }
+}
+
 :root {
   --primary-accent-color: #16a085;
   --background-color: white;
@@ -235,12 +256,12 @@ body {
   font-weight: 400;
   background-color: var(--background-color);
   color: var(--text-color);
-  transition: 0.9s ease;
+  transition: background-color 0.9s ease, color 0.9s ease;
 }
 
 body h1 {
   color: var(--h1-color);
-  transition: 0.9s ease;
+  transition: background-color 0.9s ease, color 0.9s ease;
 }
 
 body a {

@@ -39,12 +39,35 @@
 }
 
 #profile-picture {
-	-ms-flex-item-align: center;
-	-ms-grid-row-align: center;
 	align-self: center;
 	width: 250px;
 	height: 250px;
 	background: url('images/profile/profile-picture.jpg') no-repeat center center;
 	background-size: contain;
 	border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+	#landing-page {
+		flex-direction: row;
+		padding-top: 6rem;
+		align-items: start;
+
+		#main-text-wrapper {
+			h1 {
+				font-size: 3rem;
+			}
+
+			h2 {
+				font-weight: 400;
+				font-size: 1.5rem;
+				margin: 1rem 0 4.2rem 0;
+			}
+		}
+		#profile-picture {
+			width: 200px;
+			height: 200px;
+			align-self: initial;
+		}
+	}
 }

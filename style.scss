@@ -31,11 +31,11 @@ body {
 	font-weight: 400;
 	background-color: var(--background-color);
 	color: var(--text-color);
-	transition: 0.9s ease;
+	transition: background-color 0.9s ease, color 0.9s ease;
 
 	h1 {
 		color: var(--h1-color);
-		transition: 0.9s ease;
+		transition: background-color 0.9s ease, color 0.9s ease;
 	}
 
 	a {
