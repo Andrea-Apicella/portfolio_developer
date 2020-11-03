@@ -7,13 +7,17 @@
   padding: 0 10rem;
   background: var(--navbar-background-color);
   color: var(--text-color);
-  transition-property: background-color, color;
-  transition: 0.9s ease;
+  transition: background-color 0.9s, color 0.9s ease-in-out;
 }
 
 .navbar .brand-title {
   font-size: 1.5rem;
   margin-left: 1rem;
+  color: var(--primary-accent-color);
+}
+
+.navbar .brand-title h1:after {
+  content: '.';
   color: var(--primary-accent-color);
 }
 
@@ -61,71 +65,9 @@
 
 .navbar #toggle-button {
   display: none;
-  position: absolute;
-  top: calc(45px - 12px);
-  right: 1rem;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-  transition: transform 0.5s ease;
 }
 
-.navbar #toggle-button span {
-  position: absolute;
-  display: block;
-  height: 3px;
-  width: 100%;
-  border-radius: 10px;
-  background-color: #666;
-  transform: rotate(0deg);
-  opacity: 1;
-  left: 0px;
-  transition: all 0.2s ease-in-out;
-}
-
-.navbar #toggle-button span:nth-child(1) {
-  top: 0px;
-  transform-origin: left center;
-}
-
-.navbar #toggle-button span:nth-child(2) {
-  top: 9px;
-  transform-origin: left center;
-}
-
-.navbar #toggle-button span:nth-child(3) {
-  top: 18px;
-  transform-origin: left center;
-}
-
-.navbar #toggle-button.clicked span {
-  background-color: var(--primary-accent-color);
-}
-
-.navbar #toggle-button.clicked span:nth-child(1) {
-  top: -1px;
-  transform: rotate(45deg);
-}
-
-.navbar #toggle-button.clicked span:nth-child(2) {
-  opacity: 0;
-  width: 0%;
-  left: -10px;
-}
-
-.navbar #toggle-button.clicked span:nth-child(3) {
-  top: 20px;
-  transform: rotate(-45deg);
-}
-
-.navbar #toggle-button:hover span {
-  background-color: var(--primary-accent-color);
-}
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -143,11 +85,11 @@
     transition: max-height 0.5s;
     z-index: 1;
     overflow: hidden;
+    transition: max-height 0.7s ease-out;
   }
   .navbar .navbar-links.active {
-    max-height: 1000px;
-    /* visibility: visible; */
-    transition: max-height 0.7s;
+    max-height: 600px;
+    transition: max-height 0.7s ease-in;
   }
   .navbar .navbar-links ul {
     flex-direction: column;
@@ -157,9 +99,63 @@
     margin-left: 1rem;
   }
   .navbar #toggle-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    position: absolute;
+    top: calc(45px - 12px);
+    right: 1rem;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.6s ease-in-out;
+  }
+  .navbar #toggle-button span {
+    position: absolute;
+    display: block;
+    left: 0px;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--text-color);
+  }
+  .navbar #toggle-button span#top-bar {
+    background-color: var(--text-color);
+    top: 0px;
+    transform: rotate(0deg);
+    transition: top 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  .navbar #toggle-button span#mid-bar {
+    background-color: var(--text-color);
+    top: 9px;
+    opacity: 1;
+    left: 0px;
+    transition: opacity 0.4s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  .navbar #toggle-button span#bot-bar {
+    background-color: var(--text-color);
+    top: 18px;
+    transform: rotate(0deg);
+    transition: top 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  .navbar #toggle-button.clicked {
+    transform: rotate(-180deg);
+  }
+  .navbar #toggle-button.clicked span#top-bar {
+    top: 9px;
+    transform: rotate(45deg);
+    background-color: var(--primary-accent-color);
+    transition: top 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  .navbar #toggle-button.clicked span#mid-bar {
+    opacity: 0;
+    background-color: var(--primary-accent-color);
+    transition: opacity 0.4s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  .navbar #toggle-button.clicked span#bot-bar {
+    top: 9px;
+    transform: rotate(-45deg);
+    background-color: var(--primary-accent-color);
+    transition: top 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.2s ease-in-out;
   }
 }
 
@@ -192,14 +188,12 @@
   outline: none;
   background-color: var(--primary-accent-color);
   color: white;
-  transition-property: background-color, color;
-  transition: 0.9s ease;
+  transition: background-color 0.4s, color 0.2s ease-in-out;
 }
 
 #landing-page #main-text-wrapper button:hover {
   background: none;
-  transition-property: background, color;
-  transition: 0.1s ease-in;
+  transition: background 0.2s, color 0.2s ease-in;
   color: var(--primary-accent-color);
 }
 
