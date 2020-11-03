@@ -6,13 +6,17 @@
 	padding: 0 10rem;
 	background: var(--navbar-background-color);
 	color: var(--text-color);
-	transition: 0.9s ease;
-	transition-property: background-color, color;
+	transition: background-color 0.9s, color 0.9s ease-in-out;
 
 	.brand-title {
 		font-size: 1.5rem;
 		margin-left: 1rem;
 		color: var(--primary-accent-color);
+
+		h1:after {
+			content: '.';
+			color: var(--primary-accent-color);
+		}
 	}
 
 	.navbar-links {
@@ -58,81 +62,20 @@
 			}
 		}
 	}
-
 	#toggle-button {
 		display: none;
-		position: absolute;
-		top: calc(#{$navbar-height/2} - 12px);
-		right: 1rem;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		width: 30px;
-		height: 21px;
-		cursor: pointer;
-		transition: transform 0.3s ease;
-
-		span {
-			position: absolute;
-			display: block;
-			height: 3px;
-			width: 100%;
-			border-radius: 10px;
-			background-color: $light-text-color;
-			transform: rotate(0deg);
-			opacity: 1;
-			left: 0px;
-			transition: all 0.3s ease-in-out;
-		}
-
-		span:nth-child(1) {
-			top: 0px;
-			transform-origin: left center;
-		}
-
-		span:nth-child(2) {
-			top: 9px;
-			transform-origin: left center;
-		}
-		span:nth-child(3) {
-			top: 18px;
-			transform-origin: left center;
-		}
-
-		&.clicked {
-			span {
-				background-color: var(--primary-accent-color);
-			}
-
-			span:nth-child(1) {
-				top: -1px;
-				transform: rotate(45deg);
-			}
-
-			span:nth-child(2) {
-				opacity: 0;
-				width: 0%;
-				left: -10px;
-			}
-			span:nth-child(3) {
-				top: 20px;
-				transform: rotate(-45deg);
-			}
-		}
-
-		&:hover span {
-			background-color: var(--primary-accent-color);
-		}
 	}
 }
 
 //NAVBAR MEDIA QUERIES
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
 	.navbar {
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: center;
 		padding: 0;
+
 		.navbar-links {
 			display: flex;
 			position: absolute;
@@ -144,18 +87,14 @@
 			transition: max-height 0.5s;
 			z-index: 1;
 			overflow: hidden;
+			transition: max-height 0.7s ease-out;
 
 			&.active {
-				max-height: 1000px;
-				/* visibility: visible; */
-				-webkit-transition: max-height 0.7s;
-				transition: max-height 0.7s;
+				max-height: 600px;
+				transition: max-height 0.7s ease-in;
 			}
 
 			ul {
-				-webkit-box-orient: vertical;
-				-webkit-box-direction: normal;
-				-ms-flex-direction: column;
 				flex-direction: column;
 				width: 100%;
 
@@ -166,9 +105,68 @@
 		}
 
 		#toggle-button {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			display: block;
+			position: absolute;
+			top: calc(#{$navbar-height/2} - 12px);
+			right: 1rem;
+			width: 30px;
+			height: 21px;
+			cursor: pointer;
+			transform: rotate(0deg);
+			transition: transform $tr-sp-slow ease-in-out;
+
+			span {
+				position: absolute;
+				display: block;
+				left: 0px;
+				height: 3px;
+				width: 100%;
+				border-radius: 10px;
+				background-color: var(--text-color);
+
+				&#top-bar {
+					background-color: var(--text-color);
+					top: 0px;
+					transform: rotate(0deg);
+					transition: top $tr-sp ease-in-out, transform $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
+				}
+				&#mid-bar {
+					background-color: var(--text-color);
+					top: 9px;
+					opacity: 1;
+					left: 0px;
+					transition: opacity $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
+				}
+				&#bot-bar {
+					background-color: var(--text-color);
+					top: 18px;
+					transform: rotate(0deg);
+					transition: top $tr-sp ease-in-out, transform $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
+				}
+			}
+
+			&.clicked {
+				transform: rotate(-180deg);
+				span {
+					&#top-bar {
+						top: 9px;
+						transform: rotate(45deg);
+						background-color: var(--primary-accent-color);
+						transition: top $tr-sp ease-in-out, transform $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
+					}
+					&#mid-bar {
+						opacity: 0;
+						background-color: var(--primary-accent-color);
+						transition: opacity $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
+					}
+					&#bot-bar {
+						top: 9px;
+						transform: rotate(-45deg);
+						background-color: var(--primary-accent-color);
+						transition: top $tr-sp ease-in-out, transform $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
+					}
+				}
+			}
 		}
 	}
 }

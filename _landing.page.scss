@@ -27,13 +27,11 @@
 			outline: none;
 			background-color: var(--primary-accent-color);
 			color: white;
-			transition-property: background-color, color;
-			transition: 0.9s ease;
+			transition: background-color $tr-sp, color $tr-sp-fast ease-in-out;
 
 			&:hover {
 				background: none;
-				transition-property: background, color;
-				transition: 0.1s ease-in;
+				transition: background $tr-sp-fast, color $tr-sp-fast ease-in;
 				color: var(--primary-accent-color);
 			}
 		}
