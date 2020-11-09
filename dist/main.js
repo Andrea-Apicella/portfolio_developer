@@ -1,8 +1,10 @@
 const toggleButton = document.querySelector('#toggle-button');
 const navbarLinks = document.querySelector('.navbar-links');
 const navLinks = document.querySelectorAll('.nav-link');
-toggleButton.addEventListener('click', (e) => {
-	e.preventDefault;
+const darkModeToggler = document.querySelector('#dark-mode-toggler');
+
+// toggler navbar
+toggleButton.addEventListener('click', () => {
 	navbarLinks.classList.toggle('active');
 	toggleButton.classList.toggle('clicked');
 });
@@ -19,3 +21,7 @@ navLinks.forEach((link) => {
 	});
 });
 
+//toggle dark-mode
+darkModeToggler.addEventListener('click', () => {
+	document.querySelector('body').classList.toggle('dark-mode-on');
+});

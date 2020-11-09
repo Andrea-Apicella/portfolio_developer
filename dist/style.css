@@ -7,10 +7,13 @@
   padding: 0 10rem;
   background: var(--navbar-background-color);
   color: var(--text-color);
-  transition: background-color 0.9s, color 0.9s ease-in-out;
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+  box-shadow: 0px 0px 10px var(--shadow-color);
 }
 
 .navbar .brand-title {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   margin-left: 1rem;
   color: var(--primary-accent-color);
@@ -19,6 +22,15 @@
 .navbar .brand-title h1:after {
   content: '.';
   color: var(--primary-accent-color);
+}
+
+.navbar .brand-title #dark-mode-toggler {
+  width: 32px;
+  height: 32px;
+  margin-left: 20px;
+  background: url("./images/icons/dark-mode-icon.png") no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
 }
 
 .navbar .navbar-links ul {
@@ -51,12 +63,12 @@
   position: absolute;
   bottom: -1;
   left: 17px;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.2s ease-in-out;
 }
 
 .navbar .navbar-links ul li a:hover:after {
   width: 35px;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.2s ease-in-out;
 }
 
 .navbar .navbar-links ul li a.active:after {
@@ -69,9 +81,7 @@
 
 @media screen and (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0;
   }
   .navbar .navbar-links {
@@ -82,14 +92,14 @@
     max-height: 0px;
     background-color: var(--navbar-background-color);
     font-size: 0.9rem;
-    transition: max-height 0.5s;
+    transition: max-height 0.4s;
     z-index: 1;
     overflow: hidden;
-    transition: max-height 0.7s ease-out;
+    transition: max-height 0.6s ease-out;
   }
   .navbar .navbar-links.active {
     max-height: 600px;
-    transition: max-height 0.7s ease-in;
+    transition: max-height 0.6s ease-in;
   }
   .navbar .navbar-links ul {
     flex-direction: column;
@@ -233,16 +243,7 @@
   --navbar-background-color: white;
   --text-color: #666;
   --h1-color: #32333c;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-accent-color: #2ecc71;
-    --background-color: #2b2c2c;
-    --navbar-background-color: #1b1b1b;
-    --h1-color: white;
-    --text-color: #e9e9e9;
-  }
+  --shadow-color: #eee;
 }
 
 * {
@@ -266,5 +267,14 @@ body h1 {
 
 body a {
   color: var(--text-color);
+}
+
+body.dark-mode-on {
+  --primary-accent-color: #2ecc71;
+  --background-color: #2b2c2c;
+  --navbar-background-color: #1b1b1b;
+  --h1-color: white;
+  --text-color: #e9e9e9;
+  --shadow-color: #000;
 }
 /*# sourceMappingURL=style.css.map */
