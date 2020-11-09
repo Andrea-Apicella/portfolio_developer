@@ -76,6 +76,20 @@ body {
 	}
 }
 
+.icon {
+	background-color: var(--text-color);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.font-awesome-icon {
+		color: white;
+	}
+}
+
 .section {
 	padding: 2rem 2rem;
 }
