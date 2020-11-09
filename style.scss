@@ -1,16 +1,18 @@
 @import './variables';
 @import './navbar';
 @import './landing.page';
-
+@import './about';
+@import './education';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
-	--primary-accent-color: #16a085;
-	--background-color: white;
-	--navbar-background-color: white;
-	--text-color: #666;
-	--h1-color: #32333c;
-	--shadow-color: #eee;
+	--primary-accent-color: #{$primary-accent-color-light-mode};
+	--background-color: #{$background-color-light-mode};
+	--background-color2: #{$background-color2-light-mode};
+	--navbar-background-color: #{$navbar-background-color-light-mode};
+	--text-color: #{$text-color-light-mode};
+	--h1-color: #{$h1-color-light-mode};
+	--shadow-color: #{$shadow-color-light-mode};
 	// @media (prefers-color-scheme: dark) {
 	// 	--primary-accent-color: #2ecc71;
 	// 	--background-color: #2b2c2c;
@@ -25,6 +27,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -32,11 +35,11 @@ body {
 	font-weight: 400;
 	background-color: var(--background-color);
 	color: var(--text-color);
-	transition: background-color 0.9s ease, color 0.9s ease;
+	transition: background-color $tr-sp-slow ease, color $tr-sp-slow ease;
 
 	h1 {
 		color: var(--h1-color);
-		transition: background-color 0.9s ease, color 0.9s ease;
+		transition: background-color $tr-sp-slow ease, color $tr-sp-slow ease;
 	}
 
 	a {
@@ -44,12 +47,81 @@ body {
 	}
 
 	&.dark-mode-on {
-		--primary-accent-color: #2ecc71;
-		--background-color: #2b2c2c;
-		--navbar-background-color: #1b1b1b;
-		--h1-color: white;
-		--text-color: #e9e9e9;
-		--shadow-color: #000;
+		--primary-accent-color: #{$primary-accent-color-dark-mode};
+		--background-color: #{$background-color-dark-mode};
+		--background-color2: #{$background-color2-dark-mode};
+		--navbar-background-color: #{$navbar-background-color-dark-mode};
+		--text-color: #{$text-color-dark-mode};
+		--h1-color: #{$h1-color-dark-mode};
+		--shadow-color: #{$shadow-color-dark-mode};
 	}
 }
-/*# sourceMappingURL=style.css.map */
+
+.button {
+	border: solid 2px var(--primary-accent-color);
+	border-radius: 4px;
+	width: 179px;
+	padding: 16px 0;
+	font-weight: 600;
+	cursor: pointer;
+	outline: none;
+	background-color: var(--primary-accent-color);
+	color: white;
+	transition: background-color $tr-sp ease, color $tr-sp-fast ease-in-out;
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0);
+		transition: background-color $tr-sp-fast ease, color $tr-sp-fast ease-in;
+		color: var(--primary-accent-color);
+	}
+}
+
+.section {
+	padding: 2rem 2rem;
+}
+
+.section-title {
+	position: relative;
+	font-size: 200%;
+	margin-bottom: 2rem;
+
+	&:after {
+		content: '';
+		height: 3px;
+		width: 130px;
+		position: absolute;
+		left: 0px;
+		bottom: -2px;
+		background-color: var(--primary-accent-color);
+		border-radius: 3px;
+	}
+}
+
+.section-p {
+	margin: 2rem 0;
+}
+
+.cards-container {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr;
+}
+
+.card {
+	background: gray;
+	width: 100%;
+	height: 300px;
+	border-radius: 15px;
+}
+
+@media screen and(min-width: 768px) {
+	.cards-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+} /*# sourceMappingURL=style.css.map */
+
+@media screen and(min-width: 1200px) {
+	.cards-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+} /*# sourceMappingURL=style.css.map */
