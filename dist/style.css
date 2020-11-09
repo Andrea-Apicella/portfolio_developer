@@ -244,6 +244,13 @@
   transition: background-color 0.4s ease-in-out;
 }
 
+#education .card.creative {
+  background: red;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  position: initial;
+}
+
 :root {
   --primary-accent-color: #16a085;
   --background-color: white;
@@ -333,6 +340,13 @@ body.dark-mode-on {
 }
 
 .cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  width: 100%;
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
@@ -346,13 +360,18 @@ body.dark-mode-on {
 }
 
 @media screen and (min-width: 768px) {
-  .cards-container {
+  .cards {
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 1200px) {
-  .cards-container {
-    grid-template-columns: repeat(3, 1fr);
+  .cards {
+    max-width: 1200px;
+    width: 70%;
+  }
+  .card {
+    max-height: 400px;
   }
 }
 /*# sourceMappingURL=style.css.map */

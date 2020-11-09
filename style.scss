@@ -102,6 +102,12 @@ body {
 }
 
 .cards-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.cards {
+	width: 100%;
 	display: grid;
 	gap: 2rem;
 	grid-template-columns: 1fr;
@@ -115,13 +121,19 @@ body {
 }
 
 @media screen and(min-width: 768px) {
-	.cards-container {
+	.cards {
+		width: 100%;
 		grid-template-columns: repeat(2, 1fr);
 	}
 } /*# sourceMappingURL=style.css.map */
 
 @media screen and(min-width: 1200px) {
-	.cards-container {
-		grid-template-columns: repeat(3, 1fr);
+	.cards {
+		max-width: 1200px;
+		width: 70%;
+		// grid-template-columns: repeat(3, 1fr);
+	}
+	.card {
+		max-height: 400px;
 	}
 } /*# sourceMappingURL=style.css.map */
