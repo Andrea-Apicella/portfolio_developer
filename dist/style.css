@@ -172,21 +172,24 @@
 }
 
 #landing-page {
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0 1.5rem;
+  align-items: center;
+  padding-top: 90px;
 }
 
-#landing-page #main-text-wrapper h1 {
-  font-size: 2.5rem;
+#landing-page #main-text-wrapper {
+  height: 32vh;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 #landing-page #main-text-wrapper h2 {
-  font-weight: 400;
-  font-size: 1.5rem;
-  margin: 1rem 0 2.1rem 0;
+  padding-bottom: 2rem;
 }
 
 #landing-page #main-text-wrapper button.button {
@@ -210,32 +213,31 @@
 }
 
 #profile-picture {
-  align-self: center;
-  width: 250px;
-  height: 250px;
-  background: url("images/profile/profile-picture.jpg") no-repeat center center;
-  background-size: contain;
+  width: clamp(280px, 35vw, 400px);
+}
+
+#profile-picture img {
+  max-width: 100%;
+  height: auto;
   border-radius: 50%;
 }
 
 @media only screen and (min-width: 768px) {
   #landing-page {
     flex-direction: row;
-    padding-top: 6rem;
-    align-items: start;
+    justify-content: space-around;
+    align-items: center;
   }
-  #landing-page #main-text-wrapper h1 {
-    font-size: 3rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  #landing-page {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
-  #landing-page #main-text-wrapper h2 {
-    font-weight: 400;
-    font-size: 1.5rem;
-    margin: 1rem 0 4.2rem 0;
-  }
-  #landing-page #profile-picture {
-    width: 200px;
-    height: 200px;
-    align-self: initial;
+  #landing-page #main-text-wrapper {
+    height: 45vh;
   }
 }
 
@@ -329,12 +331,12 @@ body.dark-mode-on {
 }
 
 .section {
-  padding: 2rem 2rem;
+  padding: 2rem clamp(2rem, 10vw, 20rem);
 }
 
 .section-title {
   position: relative;
-  font-size: 200%;
+  font-size: clamp(2rem, 2.5vw, 5rem);
   margin-bottom: 2rem;
 }
 
@@ -349,8 +351,18 @@ body.dark-mode-on {
   border-radius: 3px;
 }
 
+.hero-title {
+  font-size: clamp(3rem, 5vw, 6rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 400;
+}
+
 .section-p {
   margin: 2rem 0;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
 }
 
 .cards-container {

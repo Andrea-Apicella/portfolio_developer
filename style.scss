@@ -91,12 +91,12 @@ body {
 }
 
 .section {
-	padding: 2rem 2rem;
+	padding: 2rem clamp(2rem, 10vw, 20rem);
 }
 
 .section-title {
 	position: relative;
-	font-size: 200%;
+	font-size: clamp(2rem, 2.5vw, 5rem);
 	margin-bottom: 2rem;
 
 	&:after {
@@ -111,8 +111,18 @@ body {
 	}
 }
 
+.hero-title {
+	font-size: clamp(3rem, 5vw, 6rem);
+}
+
+.hero-subtitle {
+	font-size: clamp(1.5rem, 2vw, 2rem);
+	font-weight: 400;
+}
+
 .section-p {
 	margin: 2rem 0;
+	font-size: clamp(1rem, 1.3vw, 1.5rem);
 }
 
 .cards-container {
