@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
 		<title>Andrea Apicella</title>
+		<script src="https://kit.fontawesome.com/d69139bf03.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header>
@@ -30,14 +31,15 @@
 			</nav>
 		</header>
 		<main>
-			<section id="landing-page">
+			<section class="section" id="landing-page">
 				<div id="main-text-wrapper">
-					<h1>I'm Andrea</h1>
-					<h2>AI student and Web Developer</h2>
+					<h1 class="hero-title">I'm Andrea</h1>
+					<h2 class="hero-subtitle">AI student and Web Developer</h2>
 					<button class="button">Contact Me</button>
 				</div>
-
-				<div id="profile-picture"></div>
+				<div id="profile-picture">
+					<img src="./images/profile/profile-picture.jpg" alt="profile-picture" />
+				</div>
 			</section>
 			<section class="section" id="about">
 				<h1 class="section-title">About me</h1>
@@ -47,17 +49,34 @@
 			<section class="section" id="education">
 				<h1 class="section-title">Education</h1>
 				<p class="section-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam harum velit odit omnis vel quisquam dignissimos fugiat. Cum, totam quaerat.</p>
-				<div class="cards-container" id="education-projects-container">
-					<div class="card"></div>
-					<div class="card"></div>
-					<div class="card"></div>
-					<div class="card"></div>
-					<div class="card"></div>
-					<div class="card"></div>
-					<div class="card"></div>
-					<div class="card"></div>
+				<div class="filter">
+					<ul>
+						<li id="creative-toggler">Creative Computing</li>
+						<li>Machine Learning</li>
+					</ul>
+				</div>
+				<div class="cards-container">
+					<div class="cards" id="education-projects-container">
+						<div class="card creative"></div>
+						<div class="card"></div>
+						<div class="card creative"></div>
+						<div class="card creative"></div>
+						<div class="card creative"></div>
+						<div class="card"></div>
+						<div class="card"></div>
+						<div class="card"></div>
+					</div>
 				</div>
 			</section>
+			<footer>
+				<section class="section" id="contact">
+					<h1 class="section-title">Contact Me</h1>
+					<p class="section-p">On social media</p>
+					<div class="icon">
+						<i class="font-awesome-icon fab fa-whatsapp"></i>
+					</div>
+				</section>
+			</footer>
 		</main>
 		<script src="main.js"></script>
 	</body>
