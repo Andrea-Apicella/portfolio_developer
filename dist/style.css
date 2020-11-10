@@ -222,6 +222,22 @@
   border-radius: 50%;
 }
 
+@media only screen and (max-height: 800px) {
+  #landing-page {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #landing-page #profile-picture {
+    width: clamp(230px, 25vw, 400px);
+  }
+  #landing-page #profile-picture img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   #landing-page {
     flex-direction: row;
