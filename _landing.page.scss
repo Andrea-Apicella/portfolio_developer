@@ -25,10 +25,7 @@
 				padding: 16px 0;
 				font-size: 1.2rem;
 				font-weight: 600;
-				cursor: pointer;
 				outline: none;
-				background-color: var(--primary-accent-color);
-				color: white;
 				transition: background-color $tr-sp, color $tr-sp-fast ease-in-out;
 
 				&:hover {

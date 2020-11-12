@@ -3,6 +3,7 @@
 @import './landing.page';
 @import './about';
 @import './education';
+@import './contact';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -11,6 +12,7 @@
 	--background-color2: #{$background-color2-light-mode};
 	--navbar-background-color: #{$navbar-background-color-light-mode};
 	--text-color: #{$text-color-light-mode};
+	--button-text-color: #{$button-text-color-light-mode};
 	--h1-color: #{$h1-color-light-mode};
 	--shadow-color: #{$shadow-color-light-mode};
 	// @media (prefers-color-scheme: dark) {
@@ -52,6 +54,7 @@ body {
 		--background-color2: #{$background-color2-dark-mode};
 		--navbar-background-color: #{$navbar-background-color-dark-mode};
 		--text-color: #{$text-color-dark-mode};
+		--button-text-color: #{$button-text-color-dark-mode};
 		--h1-color: #{$h1-color-dark-mode};
 		--shadow-color: #{$shadow-color-dark-mode};
 	}
@@ -66,7 +69,7 @@ body {
 	cursor: pointer;
 	outline: none;
 	background-color: var(--primary-accent-color);
-	color: white;
+	color: var(--button-text-color);
 	transition: background-color $tr-sp ease, color $tr-sp-fast ease-in-out;
 
 	&:hover {
@@ -86,7 +89,7 @@ body {
 	align-items: center;
 
 	.font-awesome-icon {
-		color: white;
+		color: var(--text-color);
 	}
 }
 

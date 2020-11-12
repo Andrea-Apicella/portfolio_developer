@@ -1,0 +1,27 @@
+#contact {
+	background: var(--background-color2);
+	color: var(--text-color);
+	.icons-container {
+		display: flex;
+		justify-content: space-around;
+
+		.icon {
+			// background-color: $background-color-dark-mode;
+
+			.font-awesome-icon {
+				color: white;
+			}
+		}
+
+		.icon:hover {
+			background: var(--primary-accent-color);
+			cursor: pointer;
+			transition: background-color $tr-sp-fast ease-in-out;
+
+			.font-awesome-icon {
+				color: var(--background-color2);
+				transition: color $tr-sp ease-in-out;
+			}
+		}
+	}
+}

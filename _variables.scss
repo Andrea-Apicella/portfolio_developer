@@ -1,23 +1,31 @@
 // Colors
 $primary-accent-color-light-mode: #16a085;
 $primary-accent-color-dark-mode: #2ecc71;
+$primary-accent-color-dark-mode: #a3f7b5ff;
 
 $background-color-light-mode: white;
 $background-color-dark-mode: #2b2c2c;
+$background-color-dark-mode: #0a1128ff;
 
 $background-color2-light-mode: #f1f2f6;
 $background-color2-dark-mode: #222;
+$background-color2-dark-mode: #040710;
+
 $navbar-background-color-light-mode: white;
-$navbar-background-color-dark-mode: #1b1b1b;
+$navbar-background-color-dark-mode: #040710;
 
 $text-color-light-mode: #666;
-$text-color-dark-mode: #e9e9e9;
+$text-color-dark-mode: #eee;
+
+$button-text-color-light-mode: white;
+$button-text-color-dark-mode: #0f131d;
 
 $h1-color-light-mode: #32333c;
-$h1-color-dark-mode: white;
+$h1-color-dark-mode: rgb(114, 79, 79);
+$h1-color-dark-mode: #a3f7b5ff;
 
 $shadow-color-light-mode: #eee;
-$shadow-color-dark-mode: #000;
+$shadow-color-dark-mode: rgb(29, 29, 29);
 
 // Transitions
 $tr-sp-fast: 0.2s;
@@ -25,3 +33,12 @@ $tr-sp: 0.4s;
 $tr-sp-slow: 0.6s;
 
 $navbar-height: 90px;
+
+// new palette
+
+$oxford-blue: #0a1128ff;
+$granny-smith-apple: #a3f7b5ff;
+$skobeloff: #216869ff;
+$tumbleweed: #e0a890ff;
+$lavender-gray: #cbc6d2ff;
+$rich-black-fogra-29: #040710;
