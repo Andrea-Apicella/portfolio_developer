@@ -113,6 +113,15 @@ body {
 		border-radius: 3px;
 	}
 }
+.section-subtitle{
+	font-weight: 400;
+	font-size: clamp(1.2rem, 2vw, 3rem);
+	margin-bottom: 2rem;
+}
+.section-p {
+	margin: 2rem 0;
+	font-size: clamp(1rem, 1.3vw, 1.5rem);
+}
 
 .hero-title {
 	font-size: clamp(3rem, 5vw, 6rem);
@@ -121,11 +130,6 @@ body {
 .hero-subtitle {
 	font-size: clamp(1.5rem, 2vw, 2rem);
 	font-weight: 400;
-}
-
-.section-p {
-	margin: 2rem 0;
-	font-size: clamp(1rem, 1.3vw, 1.5rem);
 }
 
 .cards-container {
