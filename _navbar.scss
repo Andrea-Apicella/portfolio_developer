@@ -16,7 +16,7 @@
 		display: flex;
 		align-items: center;
 		font-size: 1.5rem;
-		margin-left: 1rem;
+		margin-left: 1.5rem;
 		color: var(--primary-accent-color);
 
 		h1:after {
@@ -47,6 +47,7 @@
 					text-decoration: none;
 					padding: 1rem;
 					display: block;
+					color: var(--text-color);
 
 					&:hover {
 						color: var(--primary-accent-color);
@@ -103,7 +104,7 @@
 
 			&.active {
 				max-height: 600px;
-				transition: max-height $tr-sp-slow ease-in;
+				transition: max-height $tr-sp-slow ease-in, background-color $tr-sp-slow ease-in-out;
 			}
 
 			ul {
@@ -120,7 +121,7 @@
 			display: block;
 			position: absolute;
 			top: calc(#{$navbar-height/2} - 12px);
-			right: 1rem;
+			right: 1.5rem;
 			width: 30px;
 			height: 21px;
 			cursor: pointer;

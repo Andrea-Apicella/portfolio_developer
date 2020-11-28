@@ -160,19 +160,33 @@ body {
 	flex-direction: column;
 }
 
+.cards-container-title {
+	color: var(--h1-color);
+	font-size: clamp(1.3rem, 1.5vw, 4rem);
+	margin-bottom: 1.5rem;
+}
+
 .card-text {
 	padding: 1rem;
-	.card-title{
+	.card-title {
 		margin-bottom: 0.6rem;
 	}
 }
 
 .yt-vid {
 	width: 100%;
+	min-height: 200px;
 	height: 100%;
 	border-radius: 15px 15px 0 0;
 }
 
+.new {
+	position: absolute;
+	color: var(--primary-accent-color);
+	font-size: 0.7rem;
+	top: 5px;
+	margin: 3px;
+}
 @media screen and(min-width: 768px) {
 	.cards {
 		width: 100%;

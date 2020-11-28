@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   font-size: 1.5rem;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   color: var(--primary-accent-color);
 }
 
@@ -50,6 +50,7 @@
   text-decoration: none;
   padding: 1rem;
   display: block;
+  color: var(--text-color);
 }
 
 .navbar .navbar-links ul li a:hover {
@@ -101,7 +102,7 @@
   }
   .navbar .navbar-links.active {
     max-height: 600px;
-    transition: max-height 0.6s ease-in;
+    transition: max-height 0.6s ease-in, background-color 0.6s ease-in-out;
   }
   .navbar .navbar-links ul {
     flex-direction: column;
@@ -114,7 +115,7 @@
     display: block;
     position: absolute;
     top: calc(45px - 12px);
-    right: 1rem;
+    right: 1.5rem;
     width: 30px;
     height: 21px;
     cursor: pointer;
@@ -323,6 +324,14 @@
   transform: translateY(0);
 }
 
+#education .new {
+  position: absolute;
+  color: var(--primary-accent-color);
+  font-size: 0.7rem;
+  top: 5px;
+  margin: 3px;
+}
+
 #contact {
   background: var(--background-color2);
   color: var(--text-color);
@@ -391,7 +400,7 @@ body.dark-mode-on {
   --navbar-background-color: #040710;
   --text-color: #eee;
   --button-text-color: #0f131d;
-  --h1-color: #a3f7b5ff;
+  --h1-color: #eee;
   --shadow-color: #1d1d1d;
 }
 
@@ -497,6 +506,12 @@ body.dark-mode-on {
   flex-direction: column;
 }
 
+.cards-container-title {
+  color: var(--h1-color);
+  font-size: clamp(1.3rem, 1.5vw, 4rem);
+  margin-bottom: 1.5rem;
+}
+
 .card-text {
   padding: 1rem;
 }
@@ -507,8 +522,17 @@ body.dark-mode-on {
 
 .yt-vid {
   width: 100%;
+  min-height: 200px;
   height: 100%;
   border-radius: 15px 15px 0 0;
+}
+
+.new {
+  position: absolute;
+  color: var(--primary-accent-color);
+  font-size: 0.7rem;
+  top: 5px;
+  margin: 3px;
 }
 
 @media screen and (min-width: 768px) {
