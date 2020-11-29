@@ -1,3 +1,21 @@
-#education{
-  background: var(--background-color2);
+#education {
+	background: var(--background-color2);
+	#particles-links-card {
+		background: url('./images/education/particles-links.gif');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#particles-smoke-card {
+		background: url('./images/education/particles-smoke.gif');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	#perlin-noise-card {
+		background: url('./images/education/perlin-noise-3d.gif');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 }
