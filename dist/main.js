@@ -3,7 +3,6 @@ const toggleButton = document.querySelector('#toggle-button');
 const navbarLinks = document.querySelector('.navbar-links');
 const navLinks = document.querySelectorAll('.nav-link');
 const darkModeToggler = document.querySelector('#dark-mode-toggler');
-const creativeToggler = document.querySelector('#creative-toggler');
 // toggler navbar
 toggleButton.addEventListener('click', () => {
 	navbarLinks.classList.toggle('active');
@@ -27,9 +26,3 @@ darkModeToggler.addEventListener('click', () => {
 	document.querySelector('body').classList.toggle('dark-mode-on');
 });
 
-creativeToggler.addEventListener('click', () => {
-	creativeCards = document.querySelectorAll('.creative');
-	creativeCards.forEach((card) => {
-		card.classList.toggle('filtered');
-	});
-});

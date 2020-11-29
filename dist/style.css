@@ -260,6 +260,10 @@
   transition: background-color 0.4s ease-in-out;
 }
 
+#education {
+  background: var(--background-color2);
+}
+
 #contact {
   background: var(--background-color2);
   color: var(--text-color);
@@ -267,7 +271,12 @@
 
 #contact .icons-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+#contact .icons-container .icon {
+  margin-right: clamp(0.3rem, 2vw, 2rem);
 }
 
 #contact .icons-container .icon .font-awesome-icon {
@@ -283,6 +292,12 @@
 #contact .icons-container .icon:hover .font-awesome-icon {
   color: var(--background-color2);
   transition: color 0.4s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  #contact .icons-container {
+    justify-content: initial;
+  }
 }
 
 :root {
@@ -440,7 +455,7 @@ body.dark-mode-on {
 .cards-container .cards {
   width: 100%;
   display: grid;
-  gap: 2rem;
+  gap: clamp(2rem, 4vw, 4rem);
   grid-template-columns: 1fr;
 }
 
@@ -532,18 +547,18 @@ body.dark-mode-on {
 }
 
 @media screen and (min-width: 768px) {
-  .cards {
-    width: 100%;
+  .cards-container .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (min-width: 1200px) {
-  .cards {
-    max-width: 1200px;
-    width: 70%;
+
+@media screen and (min-width: 1400px) {
+  .section {
+    padding: clamp(2rem, 10vh, 5rem) clamp(2rem, 13vw, 20rem);
   }
-  .card {
-    max-height: 400px;
+  .cards-container .cards {
+    max-width: 1800px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 /*# sourceMappingURL=style.css.map */

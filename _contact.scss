@@ -3,10 +3,11 @@
 	color: var(--text-color);
 	.icons-container {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
+		max-width: 1200px;
 
 		.icon {
-			// background-color: $background-color-dark-mode;
+			margin-right: clamp(0.3rem, 2vw, 2rem);
 
 			.font-awesome-icon {
 				color: var(--background-color2);
@@ -22,6 +23,14 @@
 				color: var(--background-color2);
 				transition: color $tr-sp ease-in-out;
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#contact {
+		.icons-container {
+			justify-content: initial;
 		}
 	}
 }

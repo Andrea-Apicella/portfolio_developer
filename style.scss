@@ -2,6 +2,7 @@
 @import './navbar';
 @import './landing.page';
 @import './about';
+@import './research';
 @import './education';
 @import './contact';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
@@ -165,7 +166,7 @@ body {
 	.cards {
 		width: 100%;
 		display: grid;
-		gap: 2rem;
+		gap: clamp(2rem, 4vw, 4rem);
 		grid-template-columns: 1fr;
 		.card {
 			width: 100%;
@@ -261,19 +262,21 @@ body {
 	margin: 3px;
 }
 @media screen and(min-width: 768px) {
-	.cards {
-		width: 100%;
-		grid-template-columns: repeat(2, 1fr);
+	.cards-container {
+		.cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
-} /*# sourceMappingURL=style.css.map */
+}
 
-@media screen and(min-width: 1200px) {
-	.cards {
-		max-width: 1200px;
-		width: 70%;
-		// grid-template-columns: repeat(3, 1fr);
+@media screen and(min-width: 1400px) {
+	.section {
+		padding: clamp(2rem, 10vh, 5rem) clamp(2rem, 13vw, 20rem);
 	}
-	.card {
-		max-height: 400px;
+	.cards-container {
+		.cards {
+			 max-width: 1800px;
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 } /*# sourceMappingURL=style.css.map */
