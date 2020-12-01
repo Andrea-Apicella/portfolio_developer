@@ -20,10 +20,15 @@
 	}
 
 	#simons-trash-card {
-		background: url('./images/education/simons_trash.gif');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		// background: url('');
+		// background-position: center;
+		// background-repeat: no-repeat;
+		// background-size: cover;
 		grid-row: span 2;
+		max-height: 720px;
+		img {
+			height: 100%;
+			width: auto;
+		}
 	}
 }
