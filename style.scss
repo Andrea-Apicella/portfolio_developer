@@ -16,6 +16,7 @@
 	--button-text-color: #{$button-text-color-light-mode};
 	--h1-color: #{$h1-color-light-mode};
 	--shadow-color: #{$shadow-color-light-mode};
+	--hover-text-color: #{$hover-text-color-light-mode};
 	// @media (prefers-color-scheme: dark) {
 	// 	--primary-accent-color: #2ecc71;
 	// 	--background-color: #2b2c2c;
@@ -59,6 +60,7 @@ body {
 		--button-text-color: #{$button-text-color-dark-mode};
 		--h1-color: #{$h1-color-dark-mode};
 		--shadow-color: #{$shadow-color-dark-mode};
+		--hover-text-color: #{$hover-text-color-dark-mode};
 	}
 }
 
@@ -171,13 +173,17 @@ body {
 		grid-template-columns: 1fr;
 		.card {
 			width: 100%;
-			height: 300px;
+			max-width: 400px;
+			min-height: 300px;
 			border-radius: 15px;
 			position: relative;
 			overflow: hidden;
 			display: flex;
 			justify-content: center;
 			background: black;
+			border-style: solid;
+			border-width: 4px;
+			border-color: var(--primary-accent-color);
 
 			&::after {
 				content: '';
@@ -223,7 +229,7 @@ body {
 				opacity: 1;
 				text-align: center;
 				z-index: 1;
-				color: #fff;
+				color: var(--hover-text-color);
 				margin: auto;
 				padding: 0 3rem;
 				height: 70%;
@@ -238,9 +244,9 @@ body {
 				.card-title {
 					margin-bottom: 0.6rem;
 				}
-				a{
-				color: inherit;
-				text-decoration: underline;
+				a {
+					color: inherit;
+					text-decoration: underline;
 				}
 			}
 
@@ -279,11 +285,20 @@ body {
 
 @media screen and(min-width: 1400px) {
 	.section {
-		padding: clamp(2rem, 10vh, 5rem) clamp(2rem, 13vw, 20rem);
+		padding: clamp(2rem, 10vh, 5rem) clamp(20rem, 20vw, 30rem);
 	}
-	// .cards-container {
-	// 	.cards {
-	// 		max-width: 1800px;
-	// 	}
-	// }
+}
+
+@media screen and(min-width: 1800px) {
+	.cards-container {
+		.cards {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+
+@media (hover: none) {
+	.hover-only {
+		display: none;
+	}
 } /*# sourceMappingURL=style.css.map */

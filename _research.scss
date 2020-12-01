@@ -1,8 +1,14 @@
 #research {
-	#fall-detection-card {
-    background: url('./images/research/posenet-on-multicam.png');
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
+	#fall-detection-card-container {
+		.cards-container {
+			.cards {
+				#fall-detection-card {
+					background: url('./images/research/posenet-on-multicam.png');
+					background-position: top;
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+			}
+		}
 	}
 }
