@@ -292,6 +292,10 @@
   background-size: cover;
 }
 
+#education #simons-trash-card {
+  height: 600px;
+}
+
 #contact {
   background: var(--background-color2);
   color: var(--text-color);
@@ -557,6 +561,11 @@ body.dark-mode-on {
   margin-bottom: 0.6rem;
 }
 
+.cards-container .cards .card .card-text a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .cards-container .cards .card:hover .card-text {
   cursor: pointer;
   opacity: 1;
@@ -587,10 +596,6 @@ body.dark-mode-on {
 @media screen and (min-width: 1400px) {
   .section {
     padding: clamp(2rem, 10vh, 5rem) clamp(2rem, 13vw, 20rem);
-  }
-  .cards-container .cards {
-    max-width: 1800px;
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 /*# sourceMappingURL=style.css.map */
