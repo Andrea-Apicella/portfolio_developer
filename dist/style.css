@@ -220,14 +220,14 @@
   border-radius: 50%;
 }
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-width: 375px) and (max-height: 800px) {
   #landing-page {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
   }
   #landing-page #profile-picture {
-    width: clamp(230px, 25vw, 400px);
+    width: clamp(150px, 25vw, 400px);
   }
   #landing-page #profile-picture img {
     max-width: 100%;
@@ -354,7 +354,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 }
 
 body {

@@ -49,14 +49,14 @@
 }
 
 // OPTIMIZATION SCREEN WITH MORE SQUARED ASPECT RATIO (16:9 OR BELOW)
-@media only screen and (max-height: 800px) {
+@media only screen and (max-width: 375px) and (max-height: 800px) {
 	#landing-page {
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
 
 		#profile-picture {
-			width: clamp(230px, 25vw, 400px);
+			width: clamp(150px, 25vw, 400px);
 			img {
 				max-width: 100%;
 				height: auto;
