@@ -271,25 +271,16 @@
   background: var(--background-color2);
 }
 
-#education #particles-links-card {
-  background: url("./images/education/particles-links.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#education #particles-links-card video {
+  max-height: 300px;
 }
 
-#education #particles-smoke-card {
-  background: url("./images/education/particles-smoke.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#education #particles-smoke-card video {
+  max-height: 300px;
 }
 
-#education #perlin-noise-card {
-  background: url("./images/education/perlin-noise-3d.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#education #perlin-noise-card video {
+  max-height: 300px;
 }
 
 #education #simons-trash-card {
@@ -382,7 +373,7 @@ body.dark-mode-on {
   --text-color: #eee;
   --button-text-color: #0f131d;
   --h1-color: #eee;
-  --shadow-color: #1d1d1d;
+  --shadow-color: #0a0a0a;
   --hover-text-color: black;
 }
 
@@ -508,7 +499,7 @@ body.dark-mode-on {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  background: black;
+  background: #1c1c1c;
   border-style: solid;
   border-width: 4px;
   border-color: var(--primary-accent-color);

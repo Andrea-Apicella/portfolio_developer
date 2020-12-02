@@ -1,29 +1,22 @@
 #education {
 	background: var(--background-color2);
 	#particles-links-card {
-		background: url('./images/education/particles-links.gif');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		video {
+			max-height: 300px;
+		}
 	}
 	#particles-smoke-card {
-		background: url('./images/education/particles-smoke.gif');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		video {
+			max-height: 300px;
+		}
 	}
 	#perlin-noise-card {
-		background: url('./images/education/perlin-noise-3d.gif');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		video {
+			max-height: 300px;
+		}
 	}
 
 	#simons-trash-card {
-		// background: url('');
-		// background-position: center;
-		// background-repeat: no-repeat;
-		// background-size: cover;
 		grid-row: span 2;
 		max-height: 720px;
 		img {
