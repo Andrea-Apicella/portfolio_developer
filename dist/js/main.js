@@ -18,6 +18,7 @@ navLinks.forEach((link) => {
 		});
 		link.classList.add('active');
 		navbarLinks.classList.toggle('active');
+		toggleButton.classList.toggle('clicked');
 	});
 });
 
