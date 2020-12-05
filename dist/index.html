@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="stylesheet" href="./style.css" />
 		<title>Andrea Apicella</title>
 		<script src="https://kit.fontawesome.com/d69139bf03.js" crossorigin="anonymous"></script>
@@ -25,6 +26,7 @@
 						<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
 						<li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
 						<li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+						<li class="nav-item"><a href="#past-works" class="nav-link">Past Works</a></li>
 						<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
 					</ul>
 				</div>
@@ -33,23 +35,23 @@
 		<main>
 			<section class="section" id="landing-page">
 				<div id="main-text-wrapper">
-					<h1 class="hero-title">I'm Andrea</h1>
-					<h2 class="hero-subtitle">AI student and Web Developer</h2>
-					<a href="#research"><button class="button">View My Work</button></a>
+					<h1 data-aos="fade-up" data-aos-duration="800" class="hero-title">I'm Andrea</h1>
+					<h2 data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" class="hero-subtitle">AI student and Web Developer</h2>
+					<a data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" href="#research"><button class="button">View My Work</button></a>
 				</div>
-				<div id="profile-picture">
+				<div data-aos="fade-up" data-aos-delay="10" data-aos-duration="800" id="profile-picture">
 					<img src="./images/profile/profile-picture.jpg" alt="profile-picture" />
 				</div>
 			</section>
 			<section class="section" id="about">
-				<h1 class="section-title">About me</h1>
-				<p class="section-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos consectetur alias dolorem excepturi pariatur earum velit unde harum perspiciatis officia facere illum nobis consequuntur corporis possimus culpa id omnis, veritatis saepe, iste odio. Quas, quisquam consequuntur labore explicabo nesciunt cupiditate et, aliquid perspiciatis vel dolores soluta excepturi corrupti laudantium quaerat!</p>
-				<a href="./documents/cv.pdf"><button class="button" id="download-cv">Download CV</button></a>
+				<h1 class="section-title" data-aos="fade-right" data-aos-duration="800">About me</h1>
+				<p class="section-p" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos consectetur alias dolorem excepturi pariatur earum velit unde harum perspiciatis officia facere illum nobis consequuntur corporis possimus culpa id omnis, veritatis saepe, iste odio. Quas, quisquam consequuntur labore explicabo nesciunt cupiditate et, aliquid perspiciatis vel dolores soluta excepturi corrupti laudantium quaerat!</p>
+				<a href="./documents/cv.pdf"><button data-aos="fade-right" data-aos-delay="200" data-aos-duration="800" class="button" id="download-cv">Download CV</button></a>
 			</section>
 			<section id="research" class="section">
-				<h1 class="section-title">Research <span class="new">new!</span></h1>
-				<p class="section-p">In this section you will find my research projects in Deep Learning field. I started my experience with AI and especially Deep Learning in 2019, without any prior knowledge of the subject.</p>
-				<div id="fall-detection-card-container">
+				<h1 class="section-title" data-aos="fade-right" data-aos-duration="800">Research <span class="new">new!</span></h1>
+				<p class="section-p" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">In this section you will find my research projects in Deep Learning field. I started my experience with AI and especially Deep Learning in 2019, without any prior knowledge of the subject.</p>
+				<div id="fall-detection-card-container" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
 					<h2 class="cards-container-title">Fall Detection Scientific Publication</h2>
 					<div class="cards-container">
 						<div class="cards">
@@ -63,18 +65,18 @@
 						</div>
 					</div>
 				</div>
-				<a href="./documents/fall_detection_paper.pdf"><button class="button">Download Paper</button></a>
+				<a href="./documents/fall_detection_paper.pdf"><button class="button" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">Download Paper</button></a>
 			</section>
 			<section class="section" id="education">
-				<h1 class="section-title">Education</h1>
-				<p class="section-p">
+				<h1 class="section-title" data-aos="fade-right" data-aos-delay="0" data-aos-duration="800">Education</h1>
+				<p class="section-p" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">
 					During my third year of University i attended many interesting courses, which introduced me to the most creative fields of programming. <br />
 					Here is a selection of the most interesting personal projects and exam projects i worked on during that year.
 				</p>
 				<p class="section-p"><strong>Hover on the images to show info about the projects!</strong></p>
 				<div class="cards-container">
 					<div class="cards">
-						<div class="card" id="particles-links-card">
+						<div class="card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1200" id="particles-links-card">
 							<video muted playsinline autoplay loop>
 								<source src="./images/education/particles-links.webm" type="video/webm" />
 								<source src="./images/education/particles-links.mp4" type="video/mp4" />
@@ -85,7 +87,7 @@
 								<p class="card-description">Combination of particles systems and Perlin noise movement. I made these particles connect when they are near each other.</p>
 							</div>
 						</div>
-						<div class="card" id="particles-smoke-card">
+						<div class="card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200" id="particles-smoke-card">
 							<video muted playsinline autoplay loop>
 								<source src="./images/education/particles-smoke.webm" type="video/webm" />
 								<source src="./images/education/particles-smoke.mp4" type="video/mp4" />
@@ -96,7 +98,7 @@
 								<p class="card-description">Smoke expansion animation made hiding the particles and drawing a semi-transparent background.</p>
 							</div>
 						</div>
-						<div class="card" id="simons-trash-card">
+						<div class="card" data-aos="fade-up" data-aos-delay="400" data-aos-offset="300" data-aos-duration="1200" id="simons-trash-card">
 							<video muted playsinline autoplay loop>
 								<source src="./images/education/simons_trash.webm" type="video/webm" />
 								<source src="./images/education/simons_trash.mp4" type="video/mp4" />
@@ -110,7 +112,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="card" id="perlin-noise-card">
+						<div class="card" data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" data-aos-duration="1200" id="perlin-noise-card">
 							<video muted playsinline autoplay loop>
 								<source src="./images/education/3d-perlin-noise.webm" type="video/webm" />
 								<source src="./images/education/3d-perlin-noise.mp4" type="video/mp4" />
@@ -126,29 +128,29 @@
 				<button class="button">View More</button>
 			</section>
 
-			<section id="past-work" class="section">
-				<h1 class="section-title">Past works</h1>
-				<p class="section-p">
+			<section id="past-works" class="section">
+				<h1 data-aos="fade-right" data-aos-delay="0" data-aos-duration="800" class="section-title">Past works</h1>
+				<p data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" class="section-p">
 					Here you can find a selection of the best videos i produced during my work as tech reviewer for Prophecy Tech. <br />
 					I had the pleasure to work with some of the top brands in the gaming hardware industry, such as Razer, Intel, Corsair, Gigabyte and to attend international events like Computex 2018.
 				</p>
 				<div class="cards-container">
 					<div class="cards">
-						<div class="card-info">
+						<div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1200" class="card-info">
 							<iframe class="yt-vid" src="https://www.youtube.com/embed/7R_IkcPaYHM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="card-text">
 								<h1 class="card-title">Razer Phone Review</h1>
 								<p class="card-p">Video in collaboration with <a href="https://www2.razer.com/it-it">Razer Italy</a>. I had the pleasure to be the first italian gaming hardware reviewer to check out Razer's first smartphone.</p>
 							</div>
 						</div>
-						<div class="card-info">
+						<div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200" class="card-info">
 							<iframe class="yt-vid" src="https://www.youtube.com/embed/rNR_6uB_Cx4?list=PL31sey79mBuIbkaYw72jziUdhUMTW2PiU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="card-text">
 								<h1 class="card-title">Computex 2018 coverage</h1>
 								<p class="card-p">My second international event as a tech reporter. This time in Taipei on <a href="http://it.gigabyte.com/">Gigabyte</a>'s invitation. I attended <a href="https://www.computextaipei.com.tw/">Computex</a> 2018 and covered the most recent tech releases.</p>
 							</div>
 						</div>
-						<div class="card-info">
+						<div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1200" class="card-info">
 							<iframe class="yt-vid" src="https://www.youtube.com/embed/Tc3bGuCHLcI?list=PL31sey79mBuIbkaYw72jziUdhUMTW2PiU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<div class="card-text">
 								<h1 class="card-title">The most viewed</h1>
@@ -157,13 +159,13 @@
 						</div>
 					</div>
 				</div>
-				<button class="button">View More</button>
+				<button data-aos="fade-right" data-aos-delay="0" data-aos-duration="800" class="button">View More</button>
 			</section>
 			<footer>
 				<section class="section" id="contact">
-					<h1 class="section-title">Contact Me</h1>
-					<p class="section-p">I check most frequently whatsapp telegram and email, but feel free to get in touch on the platform you prefer!</p>
-					<div class="icons-container">
+					<h1 data-aos="fade-right" data-aos-delay="0" data-aos-duration="800" class="section-title">Contact Me</h1>
+					<p data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" class="section-p">I check most frequently whatsapp telegram and email, but feel free to get in touch on the platform you prefer!</p>
+					<div data-aos="fade-right" data-aos-delay="200" data-aos-duration="800" class="icons-container">
 						<div class="icon">
 							<i class="font-awesome-icon fab fa-whatsapp"></i>
 						</div>
@@ -190,12 +192,15 @@
 		</main>
 		<script src="./js/smooth-scroll.min.js"></script>
 		<script src="./js/smooth-scroll.polyfills.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>
 			const scroll = new SmoothScroll('a[href*="#"]', {
 				speed: 400,
-				offset: 80,
+				offset: 30,
 				easing: 'easeOutQuint',
 			});
+
+			AOS.init();
 		</script>
 		<script src="./js/main.js"></script>
 	</body>

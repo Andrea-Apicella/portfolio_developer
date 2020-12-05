@@ -17,8 +17,8 @@ navLinks.forEach((link) => {
 			}
 		});
 		link.classList.add('active');
-		navbarLinks.classList.toggle('active');
-		toggleButton.classList.toggle('clicked');
+		navbarLinks.classList.toggle('active'); 
+		toggleButton.classList.toggle('clicked'); //animates back the burger
 	});
 });
 

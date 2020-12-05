@@ -97,6 +97,7 @@ body {
 }
 
 .section {
+	min-height: 100vh;
 	padding: 2rem clamp(1rem, 7vw, 20rem);
 }
 
