@@ -332,6 +332,37 @@
 }
 
 :root {
+  --banner-title-color: white;
+}
+
+.navbar.top-page {
+  background: var(--primary-accent-color);
+  box-shadow: none;
+}
+
+.navbar.top-page .navbar-links ul li a {
+  color: white;
+}
+
+.navbar.top-page .navbar-links ul li a:hover {
+  color: black;
+}
+
+.banner {
+  padding-top: 90px;
+  height: 50vh;
+  background: var(--primary-accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .banner-title {
+  font-size: 300%;
+  color: --var(banner-title-color);
+}
+
+:root {
   --primary-accent-color: #16a085;
   --background-color: white;
   --background-color2: #f1f2f6;

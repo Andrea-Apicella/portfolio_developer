@@ -1,0 +1,36 @@
+:root{
+  --banner-title-color: #{$hover-text-color-light-mode};
+
+}
+
+
+
+.navbar.top-page {
+	background: var(--primary-accent-color);
+	box-shadow: none;
+	.navbar-links {
+		ul {
+			li {
+				a {
+					color: white;
+					&:hover {
+						color: black;
+					}
+				}
+			}
+		}
+	}
+}
+
+.banner {
+	padding-top: $navbar-height;
+	height: 50vh;
+	background: var(--primary-accent-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.banner-title {
+		font-size: 300%;
+		color: --var(banner-title-color);
+	}
+}

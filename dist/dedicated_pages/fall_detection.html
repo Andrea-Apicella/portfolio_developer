@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../style.css" />
+		<title>Fall Detection Research</title>
+		<script src="https://kit.fontawesome.com/d69139bf03.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar top-page">
+				<div class="brand-title">
+					<h1>A</h1>
+					<div id="dark-mode-toggler"></div>
+				</div>
+				<div id="toggle-button">
+					<span id="top-bar"></span>
+					<span id="mid-bar"></span>
+					<span id="bot-bar"></span>
+				</div>
+				<div class="navbar-links">
+					<ul>
+						<li class="nav-item"><a href="#landing-page" class="nav-link active">Home</a></li>
+						<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+						<li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
+						<li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+						<li class="nav-item"><a href="#past-works" class="nav-link">Past Works</a></li>
+						<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<section class="banner">
+        <h1 class="banner-title">Fall Detection Research</h1>
+      </section>
+		</main>
+
+		<script src="../js/smooth-scroll.min.js"></script>
+		<script src="../js/smooth-scroll.polyfills.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			const scroll = new SmoothScroll('a[href*="#"]', {
+				speed: 400,
+				offset: 30,
+				easing: 'easeOutQuint',
+			});
+
+			AOS.init();
+		</script>
+		<script src="../js/main.js"></script>
+	</body>
+</html>

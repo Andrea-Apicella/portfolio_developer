@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../fall_detection.scss"
+    ],
+    "names": [],
+    "file": "fall_detection.css"
+}
