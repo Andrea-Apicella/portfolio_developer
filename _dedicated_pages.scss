@@ -8,18 +8,18 @@
 .navbar.top-page {
 	background: var(--primary-accent-color);
 	box-shadow: none;
-	.navbar-links {
-		ul {
-			li {
-				a {
-					color: white;
-					&:hover {
-						color: black;
-					}
-				}
-			}
-		}
-	}
+	// .navbar-links {
+	// 	ul {
+	// 		li {
+	// 			a {
+	// 				color: white;
+	// 				&:hover {
+	// 					color: black;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 
 .banner {
@@ -30,7 +30,18 @@
 	justify-content: center;
 	align-items: center;
 	.banner-title {
-		font-size: 300%;
-		color: --var(banner-title-color);
+		font-size: clamp(2rem, 2.5vw, 5rem);
+		text-align: center;
+		color: var(--h1-color);
 	}
+}
+
+
+.image-caption{
+	padding: 0.5rem;
+	text-align: right;
+}
+
+.blog-image{
+	padding: 3rem 0 2rem 0;
 }

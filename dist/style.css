@@ -262,7 +262,7 @@
 }
 
 #research #fall-detection-card-container .cards-container .cards #fall-detection-card {
-  background: url("./images/research/posenet-on-multicam.png");
+  background: url("./images/research/fall-detection/posenet-on-multicam.png");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -340,14 +340,6 @@
   box-shadow: none;
 }
 
-.navbar.top-page .navbar-links ul li a {
-  color: white;
-}
-
-.navbar.top-page .navbar-links ul li a:hover {
-  color: black;
-}
-
 .banner {
   padding-top: 90px;
   height: 50vh;
@@ -358,8 +350,34 @@
 }
 
 .banner .banner-title {
-  font-size: 300%;
-  color: --var(banner-title-color);
+  font-size: clamp(2rem, 2.5vw, 5rem);
+  text-align: center;
+  color: var(--h1-color);
+}
+
+.image-caption {
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.blog-image {
+  padding: 3rem 0 2rem 0;
+}
+
+#fall-detection .section-p {
+  margin: 0.5rem 0 1rem 0;
+}
+
+#fall-detection .section-title {
+  font-size: clamp(1.3rem, 2.5vw, 5rem);
+}
+
+#fall-detection .section-title::after {
+  display: none;
+}
+
+#fall-detection video {
+  padding: 2rem 0;
 }
 
 :root {
@@ -467,9 +485,9 @@ body.dark-mode-on {
 }
 
 .section-subtitle {
-  font-weight: 400;
+  font-weight: 600;
   font-size: clamp(1.2rem, 2vw, 3rem);
-  margin-bottom: 2rem;
+  color: var(--h1-color);
 }
 
 .section-p {

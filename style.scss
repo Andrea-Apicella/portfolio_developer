@@ -120,9 +120,9 @@ body {
 	}
 }
 .section-subtitle {
-	font-weight: 400;
+	font-weight: 600;
 	font-size: clamp(1.2rem, 2vw, 3rem);
-	margin-bottom: 2rem;
+	color: var(--h1-color);
 }
 .section-p {
 	margin: 2rem 0;
@@ -276,6 +276,7 @@ body {
 	top: 5px;
 	margin: 3px;
 }
+
 @media screen and(min-width: 768px) {
 	.cards-container {
 		.cards {
