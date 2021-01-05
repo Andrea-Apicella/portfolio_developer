@@ -22,9 +22,14 @@
   color: var(--primary-accent-color);
 }
 
+.navbar .brand-title > h1 {
+  color: var(--h1-color);
+}
+
 .navbar .brand-title h1:after {
   content: '.';
   color: var(--primary-accent-color);
+  transition: color 0.4s ease-in-out;
 }
 
 .navbar .brand-title #dark-mode-toggler {
@@ -132,20 +137,17 @@
     background-color: var(--text-color);
   }
   .navbar #toggle-button span#top-bar {
-    background-color: var(--text-color);
     top: 0px;
     transform: rotate(0deg);
     transition: top 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.2s ease-in-out;
   }
   .navbar #toggle-button span#mid-bar {
-    background-color: var(--text-color);
     top: 9px;
     opacity: 1;
     left: 0px;
     transition: opacity 0.4s ease-in-out, background-color 0.2s ease-in-out;
   }
   .navbar #toggle-button span#bot-bar {
-    background-color: var(--text-color);
     top: 18px;
     transform: rotate(0deg);
     transition: top 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.2s ease-in-out;
@@ -153,21 +155,21 @@
   .navbar #toggle-button.clicked {
     transform: rotate(-180deg);
   }
+  .navbar #toggle-button.clicked span {
+    background-color: var(--primary-accent-color);
+  }
   .navbar #toggle-button.clicked span#top-bar {
     top: 9px;
     transform: rotate(45deg);
-    background-color: var(--primary-accent-color);
     transition: top 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.2s ease-in-out;
   }
   .navbar #toggle-button.clicked span#mid-bar {
     opacity: 0;
-    background-color: var(--primary-accent-color);
     transition: opacity 0.4s ease-in-out, background-color 0.2s ease-in-out;
   }
   .navbar #toggle-button.clicked span#bot-bar {
     top: 9px;
     transform: rotate(-45deg);
-    background-color: var(--primary-accent-color);
     transition: top 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.2s ease-in-out;
   }
 }
@@ -331,13 +333,37 @@
   }
 }
 
-:root {
-  --banner-title-color: white;
-}
-
-.navbar.top-page {
+.navbar.navbar-blog {
   background: var(--primary-accent-color);
   box-shadow: none;
+}
+
+.navbar.navbar-blog .brand-title h1 {
+  color: var(--banner-title-color);
+}
+
+.navbar.navbar-blog .brand-title h1::after {
+  color: var(--banner-title-color);
+}
+
+.navbar.navbar-blog .navbar-links ul li a {
+  color: var(--text-color);
+}
+
+.navbar.navbar-blog .navbar-links ul li a:hover {
+  color: var(--primary-accent-color);
+}
+
+.navbar.navbar-blog .navbar-links ul li a:after {
+  background: var(--primary-accent-color);
+}
+
+.navbar.navbar-blog #toggle-button span {
+  background-color: var(--blog-toggle-button-color);
+}
+
+.navbar.navbar-blog #toggle-button.clicked span {
+  background-color: var(--blog-toggle-button-color);
 }
 
 .banner {
@@ -352,7 +378,15 @@
 .banner .banner-title {
   font-size: clamp(2rem, 2.5vw, 5rem);
   text-align: center;
-  color: var(--h1-color);
+  color: var(--banner-title-color);
+}
+
+.blog-content .section-title {
+  color: var(--primary-accent-color);
+}
+
+.blog-content .section-subtitle {
+  color: var(--primary-accent-color);
 }
 
 .image-caption {
@@ -390,6 +424,8 @@
   --h1-color: #32333c;
   --shadow-color: #eee;
   --hover-text-color: white;
+  --banner-title-color: white;
+  --blog-toggle-button-color: white;
 }
 
 * {
@@ -426,6 +462,8 @@ body.dark-mode-on {
   --h1-color: #eee;
   --shadow-color: #0a0a0a;
   --hover-text-color: black;
+  --banner-title-color: #0a1128ff;
+  --blog-toggle-button-color: #0a1128ff;
 }
 
 .button {

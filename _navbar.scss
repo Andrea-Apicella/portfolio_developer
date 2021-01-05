@@ -19,9 +19,13 @@
 		margin-left: 1.5rem;
 		color: var(--primary-accent-color);
 
+		& > h1 {
+			color: var(--h1-color);
+		}
 		h1:after {
 			content: '.';
 			color: var(--primary-accent-color);
+			transition: color $tr-sp ease-in-out;
 		}
 
 		#dark-mode-toggler {
@@ -138,20 +142,17 @@
 				background-color: var(--text-color);
 
 				&#top-bar {
-					background-color: var(--text-color);
 					top: 0px;
 					transform: rotate(0deg);
 					transition: top $tr-sp ease-in-out, transform $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
 				}
 				&#mid-bar {
-					background-color: var(--text-color);
 					top: 9px;
 					opacity: 1;
 					left: 0px;
 					transition: opacity $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
 				}
 				&#bot-bar {
-					background-color: var(--text-color);
 					top: 18px;
 					transform: rotate(0deg);
 					transition: top $tr-sp ease-in-out, transform $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
@@ -161,21 +162,20 @@
 			&.clicked {
 				transform: rotate(-180deg);
 				span {
+					background-color: var(--primary-accent-color);
+
 					&#top-bar {
 						top: 9px;
 						transform: rotate(45deg);
-						background-color: var(--primary-accent-color);
 						transition: top $tr-sp ease-in-out, transform $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
 					}
 					&#mid-bar {
 						opacity: 0;
-						background-color: var(--primary-accent-color);
 						transition: opacity $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
 					}
 					&#bot-bar {
 						top: 9px;
 						transform: rotate(-45deg);
-						background-color: var(--primary-accent-color);
 						transition: top $tr-sp ease-in-out, transform $tr-sp ease-in-out, background-color $tr-sp-fast ease-in-out;
 					}
 				}

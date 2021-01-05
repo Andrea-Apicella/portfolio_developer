@@ -1,0 +1,75 @@
+.navbar.navbar-blog {
+	background: var(--primary-accent-color);
+	box-shadow: none;
+
+	.brand-title {
+		h1 {
+			color: var(--banner-title-color);
+
+			&::after {
+				color: var(--banner-title-color);
+			}
+		}
+	}
+
+	.navbar-links {
+		ul {
+			li {
+				a {
+					color: var(--text-color);
+
+					&:hover {
+						color: var(--primary-accent-color);
+					}
+
+					&:after {
+						background: var(--primary-accent-color);
+					}
+				}
+			}
+		}
+	}
+	#toggle-button {
+		span {
+			background-color: var(--blog-toggle-button-color);
+		}
+
+		&.clicked {
+			span {
+				background-color: var(--blog-toggle-button-color);
+			}
+		}
+	}
+}
+
+.banner {
+	padding-top: $navbar-height;
+	height: 50vh;
+	background: var(--primary-accent-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.banner-title {
+		font-size: clamp(2rem, 2.5vw, 5rem);
+		text-align: center;
+		color: var(--banner-title-color);
+	}
+}
+
+.blog-content {
+	.section-title {
+		color: var(--primary-accent-color);
+	}
+	.section-subtitle {
+		color: var(--primary-accent-color);
+	}
+}
+
+.image-caption {
+	padding: 0.5rem;
+	text-align: right;
+}
+
+.blog-image {
+	padding: 3rem 0 2rem 0;
+}

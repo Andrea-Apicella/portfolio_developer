@@ -5,7 +5,7 @@
 @import './research';
 @import './education';
 @import './contact';
-@import './dedicated_pages';
+@import './blog_pages';
 @import './fall_detection_page';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
@@ -19,6 +19,8 @@
 	--h1-color: #{$h1-color-light-mode};
 	--shadow-color: #{$shadow-color-light-mode};
 	--hover-text-color: #{$hover-text-color-light-mode};
+	--banner-title-color: #{$banner-title-light-color};
+	--blog-toggle-button-color: #{$blog-toggle-button-light-color};
 	// @media (prefers-color-scheme: dark) {
 	// 	--primary-accent-color: #2ecc71;
 	// 	--background-color: #2b2c2c;
@@ -61,6 +63,8 @@ body {
 		--h1-color: #{$h1-color-dark-mode};
 		--shadow-color: #{$shadow-color-dark-mode};
 		--hover-text-color: #{$hover-text-color-dark-mode};
+		--banner-title-color: #{$banner-title-dark-color};
+		--blog-toggle-button-color: #{$blog-toggle-button-dark-color};
 	}
 }
 
