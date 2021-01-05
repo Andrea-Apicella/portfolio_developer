@@ -12,23 +12,6 @@
 		}
 	}
 
-	.navbar-links {
-		ul {
-			li {
-				a {
-					color: var(--text-color);
-
-					&:hover {
-						color: var(--primary-accent-color);
-					}
-
-					&:after {
-						background: var(--primary-accent-color);
-					}
-				}
-			}
-		}
-	}
 	#toggle-button {
 		span {
 			background-color: var(--blog-toggle-button-color);
@@ -72,4 +55,26 @@
 
 .blog-image {
 	padding: 3rem 0 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+	.navbar.navbar-blog {
+		.navbar-links {
+			ul {
+				li {
+					a {
+						color: var(--blog-toggle-button-color);
+
+						&:hover {
+							color: var(--blog-toggle-button-color);
+						}
+
+						&:after {
+							background: var(--blog-toggle-button-color);
+						}
+					}
+				}
+			}
+		}
+	}
 }
