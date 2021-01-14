@@ -26,7 +26,7 @@
 }
 
 .banner {
-	padding-top: $navbar-height;
+	padding: $navbar-height 2rem 0 2rem;
 	height: 50vh;
 	background: var(--primary-accent-color);
 	display: flex;

@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 .navbar {
-  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -355,7 +354,7 @@
 }
 
 .banner {
-  padding-top: 90px;
+  padding: 90px 2rem 0 2rem;
   height: 50vh;
   background: var(--primary-accent-color);
   display: flex;
@@ -408,6 +407,12 @@
 
 #fall-detection .section-title::after {
   display: none;
+}
+
+#fall-detection .blog-image {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
 }
 
 #fall-detection video {
