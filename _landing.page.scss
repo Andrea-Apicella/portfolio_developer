@@ -4,7 +4,8 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-	padding-top: $navbar-height;
+	padding-right: clamp(1rem, 10vw, 20rem);
+	padding-left: clamp(1rem, 10vw, 20rem);
 
 	#main-text-wrapper {
 		height: 32vh;
@@ -12,6 +13,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
+		padding: 0 2rem 0 0;
 
 		h2 {
 			padding-bottom: 2rem;

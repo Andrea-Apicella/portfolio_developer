@@ -11,9 +11,11 @@
 	<body>
 		<header>
 			<nav class="navbar navbar-blog">
-				<div class="brand-title">
-					<h1>A</h1>
-				</div>
+				<a href="../index.html">
+					<div class="brand-title">
+						<h1>A</h1>
+					</div>
+				</a>
 				<div id="toggle-button">
 					<span id="top-bar"></span>
 					<span id="mid-bar"></span>
@@ -33,27 +35,33 @@
 		</header>
 		<main id="fall-detection" class="blog-content">
 			<section class="banner">
-				<h1 class="banner-title">Fall Detection Research</h1>
+				<div>
+					<h1 class="banner-title" data-aos="fade-up" data-aos-duration="1000">Fall Detection Research</h1>
+				</div>
 			</section>
 			<section class="section">
-				<div class="blog-image">
+				<div class="blog-image" data-aos="fade-up" data-aos-duration="800" data-aos-offset="300">
 					<img src="../images/research/fall-detection/fall-detection-blog-image.jpg" alt="cover image for fall detection page" />
 					<p class="image-caption">March 2020 - January 2021</p>
 				</div>
-				<h1 class="section-title">Real-time remote fall detection using Deep Neural Networks</h1>
-				<p class="section-p">This is my first research project using Machine Learning. I developed a fall detection system based on deep neural networks which runs inside the browser in real time. This project, which originally started as my bachelor's thesis, has been accepted for pubblication at CARE2020 ICPR's workshop. Below you will find the video presentation i made for the conference and the written explanation of how the system works.</p>
-				<h2 class="section-subtitle">Video presentation</h2>
-				<video controls width="100%" height="auto" type="video/mp4" src="../images/research/fall-detection/Video_ICPR.mp4"></video>
-				<h2 class="section-subtitle">How does it work</h2>
-				<p class="section-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ratione fugiat itaque reprehenderit hic laborum. Veritatis quis nihil quam quaerat tenetur nisi blanditiis dolore iure accusamus alias, architecto assumenda sed consectetur nulla tempore ducimus molestias quod dolorem, ab quidem. Quis repellendus ab est quaerat, porro eveniet saepe blanditiis. Commodi nemo eius, unde porro iusto provident ipsum nihil sint minima. Excepturi corrupti doloremque officiis explicabo id. Nemo totam quam enim numquam perferendis, modi illum vero ipsam ut consequuntur amet nobis sunt. Porro quia quis expedita, accusamus repudiandae adipisci voluptates impedit, vel aliquid, nihil officiis excepturi totam iure! Fugit quasi doloribus quibusdam perspiciatis, deleniti ex sed odio soluta excepturi iste impedit non quaerat? Quo, magnam praesentium qui repudiandae itaque odio consequuntur culpa aspernatur placeat numquam quidem soluta facere nostrum doloremque cum voluptatem. Commodi iste nesciunt adipisci, fugit, temporibus, omnis illo illum facere eaque culpa cupiditate. Autem recusandae numquam nam quia ex similique incidunt dignissimos. Architecto omnis veritatis labore eligendi minus repellendus dolores doloremque soluta error veniam ex fugiat quisquam praesentium quod nisi nesciunt, saepe quam! Repudiandae quam totam animi sequi culpa asperiores sapiente, expedita ducimus. Tempore ratione rerum, magni, facilis enim labore deserunt doloribus praesentium quis officiis autem. Facilis non laborum quas.</p>
-				<video muted playsinline autoplay loop width="100%" height="auto" type="video/mp4" src="../images/research/fall-detection/poses-extraction.mp4"></video>
+				<h1 class="section-title" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">Real-time remote fall detection using Deep Neural Networks</h1>
+				<p class="section-p" data-aos="fade-up" data-aos-duration="800">This is my first research project using Machine Learning. I developed a fall detection system based on deep neural networks which runs inside the browser in real time. This project, which originally started as my bachelor's thesis, has been accepted for pubblication at CARE2020 ICPR's workshop. Below you will find the video presentation i made for the conference and the written explanation of how the system works.</p>
+				<div id="ICPR-video-container" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">
+					<h2 class="section-subtitle">Video presentation</h2>
+					<iframe id="ICPR-video" width="100%" height="auto" src="https://www.youtube.com/embed/t7PABimbN5s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div data-aos="fade-up" data-aos-duration="800">
+					<h2 class="section-subtitle">How does it work</h2>
+					<p class="section-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ratione fugiat itaque reprehenderit hic laborum. Veritatis quis nihil quam quaerat tenetur nisi blanditiis dolore iure accusamus alias, architecto assumenda sed consectetur nulla tempore ducimus molestias quod dolorem, ab quidem. Quis repellendus ab est quaerat, porro eveniet saepe blanditiis. Commodi nemo eius, unde porro iusto provident ipsum nihil sint minima. Excepturi corrupti doloremque officiis explicabo id. Nemo totam quam enim numquam perferendis, modi illum vero ipsam ut consequuntur amet nobis sunt. Porro quia quis expedita, accusamus repudiandae adipisci voluptates impedit, vel aliquid, nihil officiis excepturi totam iure! Fugit quasi doloribus quibusdam perspiciatis, deleniti ex sed odio soluta excepturi iste impedit non quaerat? Quo, magnam praesentium qui repudiandae itaque odio consequuntur culpa aspernatur placeat numquam quidem soluta facere nostrum doloremque cum voluptatem. Commodi iste nesciunt adipisci, fugit, temporibus, omnis illo illum facere eaque culpa cupiditate. Autem recusandae numquam nam quia ex similique incidunt dignissimos. Architecto omnis veritatis labore eligendi minus repellendus dolores doloremque soluta error veniam ex fugiat quisquam praesentium quod nisi nesciunt, saepe quam! Repudiandae quam totam animi sequi culpa asperiores sapiente, expedita ducimus. Tempore ratione rerum, magni, facilis enim labore deserunt doloribus praesentium quis officiis autem. Facilis non laborum quas.</p>
+					<video muted playsinline autoplay loop width="100%" height="auto" type="video/mp4" src="../images/research/fall-detection/poses-extraction.mp4"></video>
+				</div>
 			</section>
 		</main>
 		<footer>
 			<section class="section" id="contact">
-				<h1 data-aos="fade-right" data-aos-delay="0" data-aos-duration="800" class="section-title">Contact Me</h1>
-				<p data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" class="section-p">I check most frequently whatsapp telegram and email, but feel free to get in touch on the platform you prefer!</p>
-				<div data-aos="fade-right" data-aos-delay="200" data-aos-offset="-200" data-aos-duration="800" class="icons-container">
+				<h1 data-aos="fade-up" data-aos-delay="0" data-aos-duration="800" class="section-title">Contact Me</h1>
+				<p data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" class="section-p">I check most frequently whatsapp telegram and email, but feel free to get in touch on the platform you prefer!</p>
+				<div data-aos="fade-up" data-aos-delay="200" data-aos-offset="-200" data-aos-duration="800" class="icons-container">
 					<div class="icon">
 						<a href="https://wa.me/393312116912"> <i class="font-awesome-icon fab fa-whatsapp"></i></a>
 					</div>

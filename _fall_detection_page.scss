@@ -11,12 +11,17 @@
 	}
 
 	.blog-image {
-		width: 100%;
-		height: auto;
-		max-width: 300px;
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 
-	video {
-		padding: 2rem 0;
+	#ICPR-video-container {
+		padding: 1rem 0 2rem;
+		iframe {
+			margin-top: 1rem;
+			min-height: 300px;
+		}
 	}
 }
