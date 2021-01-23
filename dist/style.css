@@ -744,6 +744,27 @@ body .new {
   margin: 3px;
 }
 
+body .go-up-icon {
+  visibility: hidden;
+  opacity: 0;
+  display: grid;
+  place-content: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  width: clamp(3rem, 5vw, 5rem);
+  height: clamp(3rem, 5vw, 5rem);
+  background: var(--primary-accent-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+  z-index: 1000;
+}
+
+body .go-up-icon .fa-angle-up {
+  color: var(--background-color);
+}
+
 @media screen and (min-width: 768px) {
   body .cards-container .cards {
     grid-template-columns: repeat(2, 1fr);

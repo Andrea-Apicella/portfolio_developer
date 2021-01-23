@@ -274,6 +274,27 @@ body {
 		margin: 3px;
 	}
 
+	.go-up-icon {
+		visibility: hidden;
+		opacity: 0;
+		display: grid;
+		place-content: center;
+		position: fixed;
+		bottom: 2rem;
+		right: 1rem;
+		width: clamp(3rem, 5vw, 5rem);
+		height: clamp(3rem, 5vw, 5rem);
+		background: var(--primary-accent-color);
+		border-radius: 50%;
+		cursor: pointer;
+		transition: opacity $tr-sp-fast ease-in;
+		z-index: 1000;
+
+		.fa-angle-up {
+			color: var(--background-color);
+		}
+	}
+
 	@media screen and(min-width: 768px) {
 		.cards-container {
 			.cards {
