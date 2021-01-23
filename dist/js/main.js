@@ -33,6 +33,10 @@ function goToFall() {
 	window.location = 'dedicated_pages/fall_detection.html';
 }
 
+function goToCreative() {
+	window.location = 'dedicated_pages/creative_computing.html';
+}
+
 document.addEventListener('scroll', () => {
 	if (window.scrollY > 200) {
 		goUpIcon.style.visibility = 'visible';

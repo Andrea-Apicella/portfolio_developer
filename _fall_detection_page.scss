@@ -30,7 +30,18 @@
 	#fall-detection {
 		#ICPR-video-container {
 			iframe {
-				min-height: 500px;
+				min-height: 700px;
+			}
+		}
+		.blog-image {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				width: 60%;
+				height: auto;
 			}
 		}
 	}

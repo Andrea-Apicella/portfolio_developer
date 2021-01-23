@@ -1,0 +1,38 @@
+#creative-computing {
+	#music-player {
+		width: 600px;
+		height: 600px;
+		transform: scale(0.5);
+		border: none;
+		overflow: hidden;
+	}
+
+	#me-puntinism {
+		width: 500px;
+		height: 500px;
+		transform: scale(0.6);
+		overflow: hidden;
+		border: none;
+	}
+
+	.blog-image {
+		display: grid;
+		place-content: center;
+		margin-top: -100px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#creative-computing {
+		#music-player {
+			transform: scale(1) !important;
+		}
+		#me-puntinism {
+			transform: scale(1);
+		}
+
+		.blog-image {
+			margin-top: initial;
+		}
+	}
+}

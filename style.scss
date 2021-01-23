@@ -8,6 +8,7 @@
 @import './blog_pages';
 @import './fall_detection_page';
 @import './simons_trash_page';
+@import './creative_computing_page';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -97,6 +98,10 @@ body {
 	.section {
 		min-height: 100vh;
 		padding: 2rem clamp(1rem, 7vw, 20rem);
+	}
+
+	.sub-section {
+		padding: clamp(2rem, 3vh, 6rem) 0;
 	}
 
 	.section-title {
