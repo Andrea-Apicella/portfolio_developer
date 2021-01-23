@@ -52,22 +52,20 @@
 			<section id="research" class="section">
 				<h1 class="section-title" data-aos="fade-up" data-aos-duration="800">Research <span class="new">new!</span></h1>
 				<p class="section-p" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">In this section you will find my research projects in Deep Learning field. I started my experience with AI and especially Deep Learning in 2019, without any prior knowledge of the subject.</p>
-				<a href="./dedicated_pages/fall_detection.html">
-					<div id="fall-detection-card-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-						<h2 class="cards-container-title">Fall Detection Scientific Publication</h2>
-						<div class="cards-container">
-							<div class="cards">
-								<div class="card" id="fall-detection-card">
-									<div class="card-text">
-										<h2 class="card-title">Fall Detection</h2>
-										<p class="card-category"><i class="fas fa-book"></i> Machine Learning</p>
-										<p class="card-description">My Real-time remote Fall detection projects</p>
-									</div>
+				<div id="fall-detection-card-container" onclick="goToFall()" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+					<h2 class="cards-container-title">Fall Detection Scientific Publication</h2>
+					<div class="cards-container">
+						<div class="cards">
+							<div class="card" id="fall-detection-card">
+								<div class="card-text">
+									<h2 class="card-title">Fall Detection</h2>
+									<p class="card-category"><i class="fas fa-book"></i> Machine Learning</p>
+									<p class="card-description">My Real-time remote Fall detection projects</p>
 								</div>
 							</div>
 						</div>
 					</div>
-				</a>
+				</div>
 				<a href="./documents/fall_detection_paper.pdf"><button class="button" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">Download Paper</button></a>
 			</section>
 			<section class="section" id="education">
@@ -101,22 +99,20 @@
 								<p class="card-description">Smoke expansion animation made hiding the particles and drawing a semi-transparent background.</p>
 							</div>
 						</div>
-						<a href="./dedicated_pages/simons_trash.html">
-							<div class="card" data-aos="fade-up" data-aos-delay="400" data-aos-offset="300" data-aos-duration="1200" id="simons-trash-card">
-								<video muted playsinline autoplay loop>
-									<source src="./images/education/simons_trash.webm" type="video/webm" />
-									<source src="./images/education/simons_trash.mp4" type="video/mp4" />
-								</video>
-								<div class="card-text">
-									<h2 class="card-title">Simom's Trash</h2>
-									<p class="card-category"><i class="fas fa-book"></i> Game Programming</p>
-									<p class="card-description">
-										Android game made in Lua using <a href="https://solar2d.com/">Solar2D </a> (ex Corona SDK). <br />
-										The theme for the project was the environmental issue.
-									</p>
-								</div>
+						<div id="simons-trash-card" onclick="goToSimons()" class="card" data-aos="fade-up" data-aos-delay="400" data-aos-offset="300" data-aos-duration="1200">
+							<video muted playsinline autoplay loop>
+								<source src="./images/education/simons_trash.webm" type="video/webm" />
+								<source src="./images/education/simons_trash.mp4" type="video/mp4" />
+							</video>
+							<div class="card-text">
+								<h2 class="card-title">Simom's Trash</h2>
+								<p class="card-category"><i class="fas fa-book"></i> Game Programming</p>
+								<p class="card-description">
+									Android game made in Lua using <a href="https://solar2d.com/">Solar2D </a> (ex Corona SDK). <br />
+									The theme for the project was the environmental issue.
+								</p>
 							</div>
-						</a>
+						</div>
 						<div class="card" data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" data-aos-duration="1200" id="perlin-noise-card">
 							<video muted playsinline autoplay loop>
 								<source src="./images/education/3d-perlin-noise.webm" type="video/webm" />

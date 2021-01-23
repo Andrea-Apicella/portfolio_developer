@@ -652,6 +652,7 @@ body .cards-container .cards .card {
   position: relative;
   overflow: hidden;
   display: flex;
+  cursor: pointer;
   justify-content: center;
   background: #1c1c1c;
   border-style: solid;
