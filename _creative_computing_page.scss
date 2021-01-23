@@ -1,8 +1,21 @@
 #creative-computing {
+	.section-subtitle {
+		align-self: start;
+	}
+
+	.content {
+		margin-top: clamp(4rem, 10vh, 30rem);
+		display: flex;
+		flex-wrap: wrap;
+	}
+	iframe {
+		border: none;
+		min-width: 300px;
+		min-height: 300px;
+	}
 	#me-puntinism {
-		width: 500px;
-		height: 500px;
-		transform: scale(0.6);
+		width: 300px;
+		height: 300px;
 		overflow: hidden;
 		border: none;
 	}
@@ -10,40 +23,39 @@
 	.blog-image {
 		display: grid;
 		place-content: center;
-		margin-top: -100px;
 		overflow: hidden;
 	}
 
-	#music-player-subsection {
+	.creative-subsection {
 		overflow: hidden;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
 
 		#music-player {
-			width: 600px;
-			height: 600px;
-			transform: scale(0.5);
+			width: 400px;
+			height: 450px;
 			border: none;
 			overflow: hidden;
+			padding: 2rem 0 0 0;
 		}
 	}
 }
 
 @media screen and (min-width: 768px) {
 	#creative-computing {
-		#music-player-subsection {
-			#music-player {
-				margin: 2rem 0;
-				transform: scale(1) !important;
-			}
-		}
-		#me-puntinism {
-			transform: scale(1);
-		}
-
 		.blog-image {
 			margin-top: initial;
+		}
+		.section {
+			padding: 2rem clamp(1rem, 15vw, 20rem);
+		}
+		.sub-section {
+			padding: clamp(2rem, 10vh, 6rem) 3rem;
+		}
+		.creative-subsection {
+			align-items: start;
+			flex: 0 50%;
 		}
 	}
 }
