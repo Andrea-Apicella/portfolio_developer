@@ -486,14 +486,6 @@
   }
 }
 
-#creative-computing #music-player {
-  width: 600px;
-  height: 600px;
-  transform: scale(0.5);
-  border: none;
-  overflow: hidden;
-}
-
 #creative-computing #me-puntinism {
   width: 500px;
   height: 500px;
@@ -506,10 +498,27 @@
   display: grid;
   place-content: center;
   margin-top: -100px;
+  overflow: hidden;
+}
+
+#creative-computing #music-player-subsection {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#creative-computing #music-player-subsection #music-player {
+  width: 600px;
+  height: 600px;
+  transform: scale(0.5);
+  border: none;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
-  #creative-computing #music-player {
+  #creative-computing #music-player-subsection #music-player {
+    margin: 2rem 0;
     transform: scale(1) !important;
   }
   #creative-computing #me-puntinism {
