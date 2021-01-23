@@ -174,7 +174,8 @@
 }
 
 #landing-page {
-  height: 100vh;
+  min-height: initial;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
