@@ -29,9 +29,9 @@ darkModeToggler.addEventListener('click', () => {
 });
 
 function goToSimons() {
-	window.location = 'simons_trash.html';
+	window.location = 'dedicated_pages/simons_trash.html';
 }
 
 function goToFall() {
-	window.location = 'fall_detection.html';
+	window.location = 'dedicated_pages/fall_detection.html';
 }
