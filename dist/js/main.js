@@ -29,9 +29,9 @@ darkModeToggler.addEventListener('click', () => {
 });
 
 function goToSimons() {
-	window.location = '../dist/dedicated_pages/simons_trash.html';
+	window.location = 'www.andreaapicella.info/simons_trash.html';
 }
 
 function goToFall() {
-	window.location = '../dist/dedicated_pages/fall_detection.html';
+	window.location = 'www.andreaapicella.info/fall_detection.html';
 }
