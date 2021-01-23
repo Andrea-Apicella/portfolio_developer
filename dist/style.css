@@ -432,6 +432,50 @@
   }
 }
 
+#simons-trash .section-p {
+  margin: 0.5rem 0 1rem 0;
+}
+
+#simons-trash .section-title {
+  font-size: clamp(1.3rem, 2.5vw, 5rem);
+}
+
+#simons-trash .section-title::after {
+  display: none;
+}
+
+#simons-trash .blog-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#simons-trash button {
+  margin: 1rem 0 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  #simons-trash .content {
+    margin-top: clamp(4rem, 10vh, 30rem);
+    display: flex;
+  }
+  #simons-trash #written-report-section {
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  #simons-trash #apk-section {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #simons-trash .blog-image img {
+    width: 50%;
+  }
+}
+
 :root {
   --primary-accent-color: #216869ff;
   --background-color: white;
