@@ -190,7 +190,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0 2rem 0 0;
 }
 
 #landing-page #main-text-wrapper h2 {
@@ -200,7 +199,7 @@
 #landing-page #main-text-wrapper button.button {
   border: solid 2px var(--primary-accent-color);
   border-radius: 4px;
-  width: 220px;
+  width: 100%;
   padding: 16px 0;
   font-size: 1.2rem;
   font-weight: 600;
@@ -245,6 +244,9 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+  }
+  #landing-page #main-text-wrapper button.button {
+    width: 220px;
   }
 }
 
