@@ -64,8 +64,9 @@ body {
 	.button {
 		border: solid 2px var(--primary-accent-color);
 		border-radius: 5px;
-		width: 179px;
+		width: 100%;
 		padding: 16px 0;
+		margin-bottom: 1rem;
 		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
@@ -93,6 +94,11 @@ body {
 		.font-awesome-icon {
 			color: var(--text-color);
 		}
+	}
+
+	.inline {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.section {
@@ -303,6 +309,9 @@ body {
 	}
 
 	@media screen and(min-width: 768px) {
+		.button {
+			width: 179px;
+		}
 		.cards-container {
 			.cards {
 				grid-template-columns: repeat(2, 1fr);

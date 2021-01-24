@@ -7,12 +7,6 @@
 		margin-top: clamp(4rem, 10vh, 30rem);
 		display: flex;
 		flex-wrap: wrap;
-
-		.buttons-inline {
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
-		}
 	}
 	iframe {
 		border: none;
@@ -58,9 +52,11 @@
 		.sub-section {
 			padding: clamp(2rem, 10vh, 6rem) 3rem;
 		}
-		.creative-subsection {
-			align-items: start;
-			flex: 0 50%;
-		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	.creative-subsection {
+		align-items: start;
+		flex: 0 50%;
 	}
 }
