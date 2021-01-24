@@ -1,5 +1,6 @@
 #contact {
 	min-height: initial;
+	padding-bottom: 1rem;
 	background: var(--background-color2);
 	color: var(--text-color);
 	.icons-container {
@@ -25,6 +26,16 @@
 				transition: color $tr-sp ease-in-out;
 			}
 		}
+	}
+}
+
+.credits {
+	background: var(--background-color2);
+	padding: 1rem clamp(1rem, 20vw, 10rem) 1rem 0;
+	border-top: 0.1px solid lightgray;
+	p {
+		font-size: 0.8rem;
+		text-align: right;
 	}
 }
 
