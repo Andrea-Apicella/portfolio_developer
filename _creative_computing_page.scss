@@ -2,9 +2,10 @@
 	.section-subtitle {
 		align-self: start;
 	}
-
+	.section {
+		min-height: initial;
+	}
 	.content {
-		margin-top: clamp(4rem, 10vh, 30rem);
 		display: flex;
 		flex-wrap: wrap;
 	}
