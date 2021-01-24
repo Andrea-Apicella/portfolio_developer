@@ -50,19 +50,30 @@
 				<div class="content">
 					<div id="music-player-subsection" class="sub-section creative-subsection" data-aos="fade-up" data-aos-duration="800" data-aos-offset="400">
 						<h1 class="section-subtitle">Reactive Music Player</h1>
+						<p class="section-p" data-aos="fade-up" data-aos-duration="800">A music player which reacts to the variations of the audio track's frequencies. For this project I used the <a href="https://p5js.org/reference/#/p5.FFT">p5.js Fast Fourier Transform</a> method to determine the lines' height and color based on the music. The colorful circles are part of a particles sytem implemented with Javascript ES6 classes. They move following a Perlin's noise pattern and change direction if they hit the circumference. Click on the play button to vibe some <a href="https://www.youtube.com/watch?v=SaDWXi8x0Vc">Flume</a> and see how it works!</p>
 						<iframe id="music-player" src="https://editor.p5js.org/andrea.apicella221/embed/O-xhjQocy"></iframe>
-						<p class="section-p" data-aos="fade-up" data-aos-duration="800">This is a music player made with p5.js which reacts to the variations in the different music frequencies. I used p5.js Fast Fourier Transform method to associate different lines and colors to different music notes.</p>
 					</div>
 
 					<div id="particles-links-subsection" class="sub-section creative-subsection" data-aos="fade-up" data-aos-duration="800">
 						<h2 class="section-subtitle" data-aos="fade-up" data-aos-duration="800">Particles Links</h2>
-						<p class="section-p" data-aos="fade-up" data-aos-duration="800">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius nisi iste a quae qui magnam numquam? Temporibus deserunt enim dignissimos?</p>
+						<p class="section-p" data-aos="fade-up" data-aos-duration="800">
+							While learning about particles systems using Javascript ES6 classes and <a href="https://p5js.org/reference/#/p5/noise">Perlin's noise</a> in p5.js I tried to make a network of such particles. In order to do so, I calculated the euclidean distance between each pair of particles and drawn a line between them if the distance was less than a given threshold. As you can see the lines' color intensity and stroke weight are mapped on its length. <br />
+							What you see below is the p5.js sketch running live on inside your browser.
+						</p>
 						<iframe src="https://editor.p5js.org/andrea.apicella221/embed/8qOSnI1Xl" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200"></iframe>
 					</div>
 					<div id="apk-section" class="sub-section creative-subsection" data-aos="fade-up" data-aos-duration="800">
 						<h1 class="section-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">Particles Smoke</h1>
-						<p class="section-p" data-aos="fade-up" data-aos-duration="800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae soluta delectus incidunt nisi blanditiis repellat unde, sequi repudiandae itaque porro?</p>
+						<p class="section-p" data-aos="fade-up" data-aos-duration="800">Particles smoke is the direct child of the particles links project. Here kept the Perlin's noise moving pattern and the lins between the particles. This time though, I made the particles invisible, stopped the background from continuosly redrawing itself and lowered a lot the links' opacity in order to achieve a painting effect.</p>
 						<iframe src="https://editor.p5js.org/andrea.apicella221/embed/ohROTMkdv" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200"></iframe>
+					</div>
+					<div class="p5-collection sub-section creative-subsection" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">
+						<h1 class="section-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">View them all</h1>
+						<p class="section-p" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">From here you can go and watch other projects directly from my p5.js collection, where you can even take a look a the code that powers this projects. I also made a collection of all the excercises we made during the course that you can check out. Just keep in mind the latter are not my original creations.</p>
+						<div class="buttons-inline" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">
+							<a href="https://editor.p5js.org/andrea.apicella221/collections/gA9TUnTn4"> <button class="button">Personal projects</button></a>
+							<a href="https://editor.p5js.org/andrea.apicella221/collections/gteUWYg37"><button class="button">Classwork projects</button></a>
+						</div>
 					</div>
 				</div>
 			</section>

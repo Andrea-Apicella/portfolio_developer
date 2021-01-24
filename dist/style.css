@@ -178,7 +178,7 @@
   height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   padding-right: clamp(1rem, 10vw, 20rem);
   padding-left: clamp(1rem, 10vw, 20rem);
@@ -427,6 +427,13 @@
 }
 
 @media screen and (min-width: 768px) {
+  #fall-detection .inline-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+  #fall-detection .inline-desktop .img-inline {
+    width: 49%;
+  }
   #fall-detection #ICPR-video-container iframe {
     min-height: 700px;
   }
@@ -496,6 +503,12 @@
   flex-wrap: wrap;
 }
 
+#creative-computing .content .buttons-inline {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 #creative-computing iframe {
   border: none;
   min-width: 300px;
@@ -527,7 +540,6 @@
   height: 450px;
   border: none;
   overflow: hidden;
-  padding: 2rem 0 0 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -667,6 +679,8 @@ body .section-subtitle {
 }
 
 body .section-p {
+  text-align: justify;
+  text-justify: auto;
   margin: 1.2rem 0 2rem 0;
   font-size: clamp(1rem, 1.3vw, 1.5rem);
 }

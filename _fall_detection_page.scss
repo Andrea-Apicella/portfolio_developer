@@ -28,6 +28,14 @@
 
 @media screen and (min-width: 768px) {
 	#fall-detection {
+		.inline-desktop {
+			display: flex;
+			justify-content: space-between;
+			.img-inline {
+				width: 49%;
+			}
+		}
+
 		#ICPR-video-container {
 			iframe {
 				min-height: 700px;
