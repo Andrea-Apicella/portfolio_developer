@@ -48,7 +48,6 @@ document.addEventListener('scroll', () => {
 });
 
 function goUp() {
-	document.appendChild(link);
 	window.scroll({
 		top: 0,
 		left: 0,
