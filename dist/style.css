@@ -556,6 +556,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  #creative-computing .inline-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
   #creative-computing .blog-image {
     margin-top: initial;
   }
