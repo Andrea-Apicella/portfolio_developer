@@ -459,10 +459,11 @@
 @media screen and (min-width: 768px) {
   #fall-detection .inline-desktop {
     display: flex;
-    justify-content: space-between;
   }
   #fall-detection .inline-desktop .img-inline {
-    width: 49%;
+    width: 50%;
+    height: auto;
+    max-height: 300px;
   }
   #fall-detection #ICPR-video-container iframe {
     min-height: 700px;

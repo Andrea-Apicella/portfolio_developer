@@ -46,9 +46,10 @@
 	#fall-detection {
 		.inline-desktop {
 			display: flex;
-			justify-content: space-between;
 			.img-inline {
-				width: 49%;
+				width: 50%;
+				height: auto;
+				max-height: 300px;
 			}
 		}
 
